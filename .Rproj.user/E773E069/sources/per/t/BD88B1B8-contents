@@ -1,0 +1,64 @@
+# Library 
+library(DBI)
+library(RMySQL)
+library(pool)
+library(sqldf)
+library("googleVis")
+library("lubridate")
+
+# Settings
+db_user <- 'root'
+db_password <- 'rwsp1983'
+db_name <- 'cdnaep_v00'
+#db_table <- 'your_data_table'
+db_host <- '127.0.0.1' # for local access
+db_port <- 3306
+
+# 3. Read data from db
+mydb <-  dbConnect(MySQL(), user = db_user, password = db_password,
+                   dbname = db_name, host = db_host, port = db_port)
+
+s <- paste0("select * from ", "assaltos")
+#call_crimes <- paste0("select * from ", "crimes")
+
+rs <- dbSendQuery(mydb, s)
+#rs <- dbSendQuery(mydb, call_crimes)
+
+df<- NULL
+df <-  fetch(rs, n = -1)
+
+#sqldf("select * from mydb where assaltos")
+
+
+
+df$date <- as.Date(with(df, paste(ano, mes,15,sep="-")), "%Y-%m-%d")
+#df$ocorrencias.style <-c("green")
+#Combo <- gvisComboChart(df, xvar="date",
+#                        yvar=c("ocorrencias","ocorrencias.style"),
+#                        options=list(seriesType="bars"))
+#plot(Combo)
+
+########################################################
+# Visualizacao de dados 
+
+# Instacao pacote de visualizacao
+#install.packages("echarts4r")
+
+# Carregar biblioteca
+library(echarts4r)
+
+df %>% e_chart(date) %>% e_bar(ocorrencias)
+
+
+
+########################################################
+library(dplyr)
+library(tidyr)
+df_homicidio <- df %>% group_by(ano,mes) %>% summarize(total = sum(homicidios)) %>% spread(mes,total)
+
+write.csv(df_homicidio,file = 'data/df_homicidio.csv')
+
+
+
+
+

@@ -1,0 +1,25 @@
+{
+    "id": "BD88B1B8",
+    "path": "~/R/DADOS_CDEP/sqlbank/bancodedados/leitura_verificaca_dbreconhecendosalvador.R",
+    "project_path": "leitura_verificaca_dbreconhecendosalvador.R",
+    "type": "r_source",
+    "hash": "3699714160",
+    "contents": "",
+    "dirty": false,
+    "created": 1612825274149.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "tempName": "Untitled1",
+        "cursorPosition": "10,25",
+        "scrollLine": "8"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1621131192,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1621131192149,
+    "read_only": false,
+    "read_only_alternatives": []
+}
