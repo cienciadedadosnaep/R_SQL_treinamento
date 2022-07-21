@@ -6,6 +6,10 @@ library(sqldf)
 library("googleVis")
 library("lubridate")
 
+# Dicoinario de dados 
+# https://docs.google.com/spreadsheets/d/1sGOqAJOPrLquRpBKeDcDKPjHloSWJdpgwXEkhMuNYok/edit?usp=sharing
+
+
 # Settings
 db_user <- 'root'
 db_password <- 'root'
@@ -20,8 +24,8 @@ mydb <-  dbConnect(MySQL(), user = db_user, password = db_password,
                    dbname = db_name, host = db_host, port = db_port)
 s <- paste0("select * from ", "docentes_bas_med")
 rs <- dbSendQuery(mydb, s)
-df<- NULL
-df <-  fetch(rs, n = -1)
+dfdocente <- NULL
+dfdocente <-  fetch(rs, n = -1)
 
 
 ## escolas
@@ -54,3 +58,40 @@ dfaluno <-  fetch(nalunos, n = -1)
 
 
 
+#######################################################################
+library(dplyr)
+names(dfaluno)
+
+teste <- dfaluno %>% group_by(nu_ano_censo,tp_cor_raca,tp_sexo) %>%
+                                  summarise(n=n())  %>% 
+                                  filter(nu_ano_censo %in% c(2019))          
+
+
+tp_cor_raca <- c(0,1,2,3,4,5)
+tp_cor_raca_nome <- c("Não declarada",
+"Branca",
+"Preta",
+"Parda",
+"Amarela",
+"Indígena")
+
+dfcod <- data.frame(tp_cor_raca,tp_cor_raca_nome)
+
+tp_sexo <- c(1,2)
+tp_sexo_name <- c("Masculino","Feminino")
+
+dfsexocod <- data.frame(tp_sexo_name,tp_sexo)
+
+
+teste2019 <- full_join(teste,dfsexocod,by="tp_sexo") %>% full_join(dfcod,by="tp_cor_raca")
+
+
+
+#######################################################################
+
+library(webr)
+library(ggplot2)
+
+names(teste2019) <- c("ano","nracacor","nsexo","n","sexo","raca")
+PieDonut(teste2019, aes(sexo,raca, count=n), 
+         title = "Distribuição percentual dos estudantes por raça/cor e sexo")
