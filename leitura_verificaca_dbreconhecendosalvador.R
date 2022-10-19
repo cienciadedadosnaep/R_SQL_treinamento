@@ -107,6 +107,173 @@ escola_ano_escolar <- read_csv("~/R/data_ed_bancodedados/escola_ano_escolar.csv"
 escola_ano_escolar <- read_csv("~/R/data_ed_bancodedados/escola_ano_escolar.csv")
 
 
+##########################################################################
+## Codigo escolas projeto
+## Cidade Jequie 
+
+# Dicionario tp_dependencia
+#1 - Federal
+#2 - Estadual
+#3 - Municipal
+#4 - Privada
+
+# Dicionario tp_situacao_funcionamento
+#1 - Em Atividade
+#2 - Paralisada
+#3 - Extinta (ano do Censo)
+#4 - Extinta em Anos Anteriores
+
+dfesc %>% 
+  filter(nu_ano_censo %in% c(2019)) %>%
+  group_by(tp_dependencia,tp_situacao_funcionamento) %>% 
+  summarise(n())
+
+library(ggplot2)
+library(tidyverse)
+
+##############Ensino Fundamental total############################################
+
+TDI_ESCOLAS_2021 %>% filter(CO_MUNICIPIO %in% c(2927408)) %>%
+                     filter(NO_DEPENDENCIA %in% c("Municipal","Estadual")) %>%
+#                     group_by(NO_DEPENDENCIA) %>%
+                     arrange(NO_DEPENDENCIA)%>%
+                     select(NO_DEPENDENCIA,FUN_CAT_0,MED_CAT_0) %>%
+                     mutate(Rede = factor(NO_DEPENDENCIA,c("Municipal","Estadual"))) %>%
+                     filter(!is.na(FUN_CAT_0)) %>%
+                     ggplot(aes(x=Rede,
+                                y=FUN_CAT_0,fill=NO_DEPENDENCIA))+
+                     geom_boxplot(width=0.25)+
+                     labs(x = "Rede Escolar",
+                          y = "%",
+                          fill=' ',
+                          title = 'Taxas de Distorção Idade-série (2021)',
+                          subtitle = 'Ensino Fundamental')+
+                     theme(title = element_text(size = 12,colour = "Blue"))+
+                     theme(axis.title.x=element_text(size=11)) +
+                     theme(axis.title.y=element_text(size=11)) +
+                     theme(axis.text=element_text(face="bold", color="Blue",size =12))+
+                     coord_cartesian(ylim = c(0, 100))+
+                     theme(legend.position="none")+
+                     scale_fill_manual(values=c("gray","lightblue"))
+ggsave('figuras/TDI_EF_TOTAL.png')
+
+##############Rede Municipal Ensino Fundamental por série############################################
+
+TDI_ESCOLAS_2021 %>% filter(CO_MUNICIPIO %in% c(2927408)) %>%
+  filter(NO_DEPENDENCIA %in% c("Municipal")) %>%
+  select(FUN_AI_CAT_0,FUN_AF_CAT_0) %>%
+  gather(key="EF",value = "TDI") %>%
+  mutate(ETAPAS = factor(EF,c("FUN_AI_CAT_0","FUN_AF_CAT_0"))) %>%
+  mutate(ETAPAS = fct_recode(ETAPAS,c("AI"="FUN_AI_CAT_0"))) %>%
+  mutate(ETAPAS = fct_recode(ETAPAS,c("AF"="FUN_AF_CAT_0"))) %>%
+  filter(!is.na(TDI)) %>%
+    ggplot(aes(x=ETAPAS,
+             y=TDI,fill=EF))+
+  geom_boxplot(width=0.25)+
+  labs(x = "Etapa Ensino Fundamental",
+       y = "%",
+       fill=' ',
+       title = 'Taxas de Distorção Idade-série (2021)',
+       subtitle = 'Ensino Fundamental - Rede Municipal')+
+  theme(title = element_text(size = 12,colour = "Blue"))+
+  theme(axis.title.x=element_text(size=11)) +
+  theme(axis.title.y=element_text(size=11)) +
+  theme(axis.text=element_text(face="bold", color="Blue",size =12))+
+  coord_cartesian(ylim = c(0, 100))+
+  theme(legend.position="none")+
+  scale_fill_manual(values=c("lightblue","lightblue"))
+ggsave('figuras/TDI_EF_AI_AF_MUNICIPAL.png')
+
+
+############## Rede Estadual Ensino Fundamental por série############################################
+
+TDI_ESCOLAS_2021 %>% filter(CO_MUNICIPIO %in% c(2927408)) %>%
+  filter(NO_DEPENDENCIA %in% c("Estadual")) %>%
+  select(FUN_AI_CAT_0,FUN_AF_CAT_0) %>%
+  gather(key="EF",value = "TDI") %>%
+  mutate(ETAPAS = factor(EF,c("FUN_AI_CAT_0","FUN_AF_CAT_0"))) %>%
+  mutate(ETAPAS = fct_recode(ETAPAS,c("AI"="FUN_AI_CAT_0"))) %>%
+  mutate(ETAPAS = fct_recode(ETAPAS,c("AF"="FUN_AF_CAT_0"))) %>%
+  filter(!is.na(TDI)) %>%
+  ggplot(aes(x=ETAPAS,
+             y=TDI,fill=EF))+
+  geom_boxplot(width=0.25)+
+  labs(x = "Etapa Ensino Fundamental",
+       y = "%",
+       fill=' ',
+       title = 'Taxas de Distorção Idade-série (2021)',
+       subtitle = 'Ensino Fundamental - Rede Estadual')+
+  theme(title = element_text(size = 12,colour = "Blue"))+
+  theme(axis.title.x=element_text(size=11)) +
+  theme(axis.title.y=element_text(size=11)) +
+  theme(axis.text=element_text(face="bold", color="Blue",size =12))+
+  coord_cartesian(ylim = c(0, 100))+
+  theme(legend.position="none")+
+  scale_fill_manual(values=c("gray","gray"))
+ggsave('figuras/TDI_EF_AI_AF_ESTADUAL.png')
+
+
+###############Ensino Medio total#############################################
+
+TDI_ESCOLAS_2021 %>% filter(CO_MUNICIPIO %in% c(2927408)) %>%
+  filter(NO_DEPENDENCIA %in% c("Municipal","Estadual")) %>%
+  #                     group_by(NO_DEPENDENCIA) %>%
+  arrange(NO_DEPENDENCIA)%>%
+  select(NO_DEPENDENCIA,FUN_CAT_0,MED_CAT_0) %>%
+  mutate(Rede = factor(NO_DEPENDENCIA,c("Municipal","Estadual"))) %>%
+  filter(!is.na(MED_CAT_0)) %>%
+    ggplot(aes(x=Rede,
+             y=MED_CAT_0,fill=NO_DEPENDENCIA))+
+  geom_boxplot(width=0.25)+
+  labs(x = "Rede Escolar",
+       y = "%",
+       fill=' ',
+       title = 'Taxas de Distorção Idade-série (2021)',
+       subtitle = 'Ensino Médio')+
+  theme(title = element_text(size = 12,colour = "Blue"))+
+  theme(axis.title.x=element_text(size=11)) +
+  theme(axis.title.y=element_text(size=11)) +
+  theme(axis.text=element_text(face="bold", color="Blue",size =12))+
+  coord_cartesian(ylim = c(0, 100))+
+  theme(legend.position="none")+
+  scale_fill_manual(values=c("gray","lightblue"))
+ggsave('figuras/TDI_EM_ESTADUAL.png')
+
+
+
+
+
+
+##############Ensino Fundamental total############################################
+
+TDI_ESCOLAS_2021 %>% filter(CO_MUNICIPIO %in% c(2927408)) %>%
+  filter(NO_DEPENDENCIA %in% c("Municipal","Estadual")) %>%
+                       group_by(NO_DEPENDENCIA) %>%
+  arrange(NO_DEPENDENCIA)%>%
+  select(NO_DEPENDENCIA,FUN_CAT_0,MED_CAT_0) %>%
+  mutate(Rede = factor(NO_DEPENDENCIA,c("Municipal","Estadual"))) %>%
+  filter(!is.na(FUN_CAT_0)) %>%
+  ggplot(aes(
+    x=Rede,
+    y=FUN_CAT_0
+             ,fill=NO_DEPENDENCIA
+))+
+  geom_jitter(aes(colour = NO_DEPENDENCIA),width=0.1)+
+    geom_boxplot(width=0.2,alpha=0.2)+
+  labs(
+    x = "Rede Escolar",
+       y = "%",
+       fill=' ',
+       title = 'Taxas de Distorção Idade-série (2021)',
+       subtitle = 'Ensino Fundamental')+
+  theme(title = element_text(size = 12,colour = "Blue"))+
+  theme(axis.title.x=element_text(size=11)) +
+  theme(axis.title.y=element_text(size=11)) +
+  theme(axis.text=element_text(face="bold", color="Blue",size =12))+
+  coord_cartesian(ylim = c(0, 100))+
+  theme(legend.position="none")+
+  scale_fill_manual(values=c("gray","lightblue"))
+ggsave('figuras/TDI_EF_TOTAL_jitter.png')
 
 
 
