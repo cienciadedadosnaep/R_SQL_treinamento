@@ -277,3 +277,191 @@ ggsave('figuras/TDI_EF_TOTAL_jitter.png')
 
 
 
+
+
+
+
+
+##teste bbc
+
+library(bbplot)
+
+TDI_ESCOLAS_2021 %>% filter(CO_MUNICIPIO %in% c(2927408)) %>%
+  filter(NO_DEPENDENCIA %in% c("Municipal","Estadual")) %>%
+  group_by(NO_DEPENDENCIA) %>%
+  arrange(NO_DEPENDENCIA)%>%
+  select(NO_DEPENDENCIA,FUN_CAT_0,MED_CAT_0) %>%
+  mutate(Rede = factor(NO_DEPENDENCIA,c("Municipal","Estadual"))) %>%
+  filter(!is.na(FUN_CAT_0)) %>%
+  ggplot(aes(
+    x=Rede,
+    y=FUN_CAT_0
+    ,fill=NO_DEPENDENCIA
+  ))+
+  geom_jitter(aes(colour = NO_DEPENDENCIA),width=0.1,size=2)+
+  geom_boxplot(width=0.2,alpha=0.2)+
+  labs(
+    x = "Rede Escolar",
+    y = "%",
+    fill=' ',
+    title = 'TDI (2021)',
+    subtitle = 'Ensino Fundamental')+
+  geom_label(aes(x = 1.250, y = 36.5, 
+                 label = "mediana 2x maior"), 
+             hjust = 0.2, 
+             vjust = 0.9, 
+             colour = "#555555", 
+             fill = "#FFFFFF", 
+             alpha=0.0002,
+             label.size = NA, 
+             family="Helvetica", 
+             size = 6)+
+  geom_curve(aes(x = 1.15, y = 18, xend = 1.5, yend = 32), 
+             colour = "#555555", 
+             curvature = 0.2,
+             size=0.5,arrow = arrow(length = unit(0.03, "npc")))+
+  geom_curve(aes(x = 1.5, y = 38, xend = 1.85, yend = 46), 
+             colour = "#555555", 
+             curvature = -0.2,
+             size=0.5,
+             size=0.5,arrow = arrow(length = unit(0.03, "npc")))+
+bbc_style()+
+  theme(legend.position="none")
+
+
+ggsave('figuras/TDI_EF_TOTAL_jitter.png')
+
+
+
+
+
+
+
+
+#############################################################
+  escola_ano_escolar %>%
+  filter(id_municipio %in% c(2927408)) %>%
+  mutate(ano = as.character(ano),ano_escolar=as.character(ano_escolar)) %>%
+  group_by(ano,ano_escolar) %>% select(ano,ano_escolar,taxa_aprovacao) %>%
+  filter(!is.na(taxa_aprovacao)) %>%
+  summarise(mediana=median(taxa_aprovacao)) %>%
+  ggplot(aes(x=ano,y=ano_escolar,fill=mediana))+
+  geom_tile()+
+  labs(
+    x = "ano",
+    y = "ano escolar",
+    fill='TAE',
+    title = 'Taxa de aprovação',
+    subtitle = 'Ensino Fundamental - Salvador/BA')
+  bbc_style()
+  ggsave('figuras/TAE_EF_TOTAL.png')
+  
+
+
+#######################################IDEB#####################################
+library(ggplot2)
+library(ggjoy)
+library(bbplot)
+  
+  idebssa <-  escola %>% filter(id_municipio %in% c(2927408))  
+  idebssa %>%
+    filter(ano<2021) %>%
+    filter(anos_escolares %in% c("finais (6-9)")) %>%
+    mutate(ano = as.factor(ano)) %>%
+    mutate(id_escola = as.factor(id_escola)) %>%
+    group_by(ano,id_escola) %>%
+    ggplot(aes(x=ideb, y=ano)) +
+    geom_joy(scale = 5, rel_min_height = 0.01) +
+    scale_x_continuous(expand = c(0.00, 0)) +
+    scale_y_discrete(expand = c(0.00, 0))+
+    #    scale_y_discrete(labels = Ano)+
+    xlab("")+
+    ylab("")+
+    labs(caption = "Fonte de dados:  Instituto Nacional 
+       de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)")+
+    ggtitle("Ideb das escolas de Salvador (anos finais)")+
+    theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+    theme(axis.title.y = element_text(color = "black",size = 16))+
+    theme(axis.title.x = element_text(color = "black",size = 16))+
+    theme(axis.text.y=element_text(size=16)) +
+    theme(axis.text = element_text(size = 16))  +
+    theme(legend.text = element_text(size = 14)) +
+    theme(legend.title = element_text(size = 16)) +
+    theme(legend.position = "none")
+#  +
+#    bbc_style()
+    ggsave('figuras/idebaf.png')
+  
+  
+    idebssa %>%
+      filter(ano<2021) %>%
+      filter(anos_escolares %in% c("iniciais (1-5)")) %>%
+      mutate(ano = as.factor(ano)) %>%
+      mutate(id_escola = as.factor(id_escola)) %>%
+      group_by(ano,id_escola) %>%
+      ggplot(aes(x=ideb, y=ano)) +
+      geom_joy(scale = 5, rel_min_height = 0.01) +
+      scale_x_continuous(expand = c(0.00, 0)) +
+      scale_y_discrete(expand = c(0.00, 0))+
+      #    scale_y_discrete(labels = Ano)+
+      xlab("")+
+      ylab("")+
+      labs(caption = "Fonte de dados:  Instituto Nacional 
+       de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)")+
+      ggtitle("Ideb das escolas de Salvador (anos iniciais)")+
+      theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+      theme(axis.title.y = element_text(color = "black",size = 16))+
+      theme(axis.title.x = element_text(color = "black",size = 16))+
+      theme(axis.text.y=element_text(size=16)) +
+      theme(axis.text = element_text(size = 16))  +
+      theme(legend.text = element_text(size = 14)) +
+      theme(legend.title = element_text(size = 16)) +
+      theme(legend.position = "none")
+    #  +
+    #    bbc_style()
+    ggsave('figuras/idebai.png')  
+    
+##########################finais e iniciais####################################    
+    
+
+    idebssa %>%
+      filter(ano<2021) %>%
+      filter(anos_escolares %in% c("iniciais (1-5)","finais (6-9)")) %>%
+      mutate(ano = as.factor(ano)) %>%
+      mutate(id_escola = as.factor(id_escola)) %>%
+      mutate(`Ensino Fundamental` = anos_escolares) %>%
+      group_by(ano,id_escola,anos_escolares) %>%
+      ggplot(aes(x=ideb, y=ano,fill=`Ensino Fundamental`)) +
+      geom_joy(scale = 5, rel_min_height = 0.01) +
+      scale_x_continuous(expand = c(0.00, 0)) +
+      scale_y_discrete(expand = c(0.00, 0))+
+      #    scale_y_discrete(labels = Ano)+
+      xlab("Ideb")+
+      ylab("")+
+      labs( subtitle = "Ensino Fundamental anos:", caption = "Fonte de dados:  Instituto Nacional 
+       de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)")+
+      ggtitle("Ideb das escolas de Salvador")+
+      theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+      theme(axis.title.y = element_text(color = "black",size = 16))+
+      theme(axis.title.x = element_text(color = "black",size = 16))+
+      theme(axis.text.y=element_text(size=16)) +
+      theme(axis.text = element_text(size = 16))  +
+      theme(legend.text = element_text(size = 14)) +
+      theme(legend.title = element_text(size = 16)) +
+      theme(legend.position = "bottom")  +
+        bbc_style()
+    ggsave('figuras/idebaif.png')        
+    
+    
+    
+    
+    
+    
+    
+  
+  
+  
+  
+  
+  
+  
