@@ -580,8 +580,5 @@ library(bbplot)
       theme(legend.position = "bottom")  +
       bbc_style()
     
-  
-
-    
     
     
