@@ -1,20 +1,20 @@
-projetos,COD_PROJ,cod_orientador_1,cod_orientador_2,orientador_1,orientador_2,nome_pi,escola,grupo,ID,Qualificativo ,Nota,nota_perc
+projetos,COD_PROJ,cod_orientador_1,cod_orientador_2,orientador_1,orientador_2,nome_pi,escola_pi,grupo_pi,ID,Qualificativo ,Nota,nota_perc
 "P1 - Deslocamentos para acessar o centro de atendimento educacional especializado pestalozzi da bahia: estudo de caso do padrão de viagem dos alunos com necessidades especiais
 ",P01,OR01,OR02,Silvia Camargo Fernandes Miranda,"Carolaine Costa da Silva 
 
-",Aldri de Matos Barroso,CEHMC,G1,B015,OTIMO,8,80
+",Aldri de Matos Barroso,CEHMC,G1,B015,MUITO BOM,8,80
 "P1 - Deslocamentos para acessar o centro de atendimento educacional especializado pestalozzi da bahia: estudo de caso do padrão de viagem dos alunos com necessidades especiais
 ",P01,OR01,OR02,Silvia Camargo Fernandes Miranda,"Carolaine Costa da Silva 
 
-",Ana Paula Santos Pinheiro,CEEV,G2,A001,OTIMO,8,80
+",Ana Paula Santos Pinheiro,CEEV,G2,A001,MUITO BOM,8,80
 "P1 - Deslocamentos para acessar o centro de atendimento educacional especializado pestalozzi da bahia: estudo de caso do padrão de viagem dos alunos com necessidades especiais
 ",P01,OR01,OR02,Silvia Camargo Fernandes Miranda,"Carolaine Costa da Silva 
 
-",Gabriele Santos Pinheiro,CEEV,G2,A003,OTIMO,8,80
+",Gabriele Santos Pinheiro,CEEV,G2,A003,MUITO BOM,8,80
 "P1 - Deslocamentos para acessar o centro de atendimento educacional especializado pestalozzi da bahia: estudo de caso do padrão de viagem dos alunos com necessidades especiais
 ",P01,OR01,OR02,Silvia Camargo Fernandes Miranda,"Carolaine Costa da Silva 
 
-",Luis Gustavo Simões da Costa Bahia,CEHMC,G2,A009,OTIMO,8,80
+",Luis Gustavo Simões da Costa Bahia,CEHMC,G2,A009,MUITO BOM,8,80
 P2 - Mapeamento dos estabelecimentos comerciais existentes no bairro da escola para verificar se os acessos são facilitados: estudo de caso da mobilidade urbana,P02,OR01,OR02,Silvia Camargo Fernandes Miranda,"Carolaine Costa da Silva 
 
 ",Emily Santos de Jesus,CEHMC,G1,B018,BOM,6,60
@@ -31,9 +31,9 @@ P3 -  Indicador ambiental do uso de recursos materiais nas escolas públicas da 
 ",CEEV,G1,B006,INSATISFATORIO,0,0
 P3 -  Indicador ambiental do uso de recursos materiais nas escolas públicas da cidade de Salvador - Bahia,P03,OR04,OR03,"José Oduque Nascimento de Jesus
 ",Assuero Valinas Lopo,Sophia dos Santos Barros ,CEHMC,G1,A010,BOM,5,50
-P4 -  Produção de experimentos científicos voltados à acessibilidade,P04,OR06,OR5,Tiago Paes Franca,William Cardoso Sacramento,Anthony Santos de Jesus ,CEHMC,G2,C017,BOM,8,80
-P4 -  Produção de experimentos científicos voltados à acessibilidade,P04,OR06,OR5,Tiago Paes Franca,William Cardoso Sacramento,Karin Beatriz Silva de Souza,IFBA,G2,A024,BOM,8,80
-P4 -  Produção de experimentos científicos voltados à acessibilidade,P04,OR06,OR5,Tiago Paes Franca,William Cardoso Sacramento,Laila Kimberli de Oliveira Santana ,IFBA,G2,A025,BOM,8,80
+P4 -  Produção de experimentos científicos voltados à acessibilidade,P04,OR06,OR5,Tiago Paes Franca,William Cardoso Sacramento,Anthony Santos de Jesus ,CEHMC,G2,C017,MUITO BOM,8,80
+P4 -  Produção de experimentos científicos voltados à acessibilidade,P04,OR06,OR5,Tiago Paes Franca,William Cardoso Sacramento,Karin Beatriz Silva de Souza,IFBA,G2,A024,MUITO BOM,8,80
+P4 -  Produção de experimentos científicos voltados à acessibilidade,P04,OR06,OR5,Tiago Paes Franca,William Cardoso Sacramento,Laila Kimberli de Oliveira Santana ,IFBA,G2,A025,MUITO BOM,8,80
 "P5 - Mapeamento de pontos de disposição irregular de resíduos em Salvador, Ba
 ",P05,OR08,OR07,Gabriel da Silva dos Santos,Bruna Victória Climaco Reis dos Santos,Livia Marcely Aquino,CEMCN,G1,C011,REGULAR,4,40
 "P5 - Mapeamento de pontos de disposição irregular de resíduos em Salvador, Ba
@@ -42,9 +42,9 @@ P4 -  Produção de experimentos científicos voltados à acessibilidade,P04,OR0
 ",P05,OR08,OR07,Gabriel da Silva dos Santos,Bruna Victória Climaco Reis dos Santos,Rafaella Victória dos Santos,CEMCN,G1,C015,REGULAR,4,40
 P6 - Como tornar a água potável,P06,OR10,OR09,Adriano Pereira,Larissa Barbosa Livramento,Emilly Gabrielly Silva de Souza,CMCJ,G1,C006,MUITO BOM,7,70
 P6 - Como tornar a água potável,P06,OR10,OR09,Adriano Pereira,Larissa Barbosa Livramento,Leidiane Oliveira E Santos,CMCJ,G1,B021,MUITO BOM,7,70
-P7 - Rios de Salvador (Ciência de Dados e IA),P07,OR12,OR11,Elicelma Carvalho dos Santos,Laio Luis Barbosa Ribeiro,Anciele Gonçalves dos Santos,CEHMC,G1,A007,NA,NA,NA
+P7 - Rios de Salvador (Ciência de Dados e IA),P07,OR12,OR11,Elicelma Carvalho dos Santos,Laio Luis Barbosa Ribeiro,Anciele Gonçalves dos Santos,CEHMC,G1,A007,MUITO BOM,8,80
 P7 - Rios de Salvador (Ciência de Dados e IA),P07,OR12,OR11,Elicelma Carvalho dos Santos,Laio Luis Barbosa Ribeiro,Maria Clara Silva dos Santos ,CEHMC,G1,B017,MUITO BOM,7,70
-P7 - Rios de Salvador (Ciência de Dados e IA),P07,OR12,OR11,Elicelma Carvalho dos Santos,Laio Luis Barbosa Ribeiro,Maria Thaina Mota da Silva,CEY,G1,A018,NA,NA,NA
+P7 - Rios de Salvador (Ciência de Dados e IA),P07,OR12,OR11,Elicelma Carvalho dos Santos,Laio Luis Barbosa Ribeiro,Maria Thaina Mota da Silva,CEY,G1,A018,MUITO BOM,7,70
 "P8 - Exposição de crianças e adolescentes ao aliciamento sexual infantil na internet
 ",P08,OR13,OR05,"Sandra Maria Conceição Pinheiro
 ",William Cardoso Sacramento,Ana Carolina Barroso Reis,CEHMC,G1,B014,MUITO BOM,7,70
@@ -56,37 +56,37 @@ P7 - Rios de Salvador (Ciência de Dados e IA),P07,OR12,OR11,Elicelma Carvalho d
 ",William Cardoso Sacramento,Paulo Victor Jesus da Conceição,CMCJ,G1,B024,BOM,5,50
 P9- Mapeamento do atual interesse pela leitura entre jovens estudantes de salvador-ba através de ferramentas da ciência de dado,P09,OR14,OR07,"Roseline Roseline Vanessa Santos Oliveira
 
-",Bruna Victória Climaco Reis dos Santos,Amanda de Jesus Borges dos Santos,CSB,G1,A006,OTIMO,8,80
+",Bruna Victória Climaco Reis dos Santos,Amanda de Jesus Borges dos Santos,CSB,G1,A006,MUITO BOM,8,80
 P9- Mapeamento do atual interesse pela leitura entre jovens estudantes de salvador-ba através de ferramentas da ciência de dado,P09,OR14,OR07,"Roseline Roseline Vanessa Santos Oliveira
 
-",Bruna Victória Climaco Reis dos Santos,Ana Vitória de Jesus Silva,CEMD,G2,A002,OTIMO,8,80
+",Bruna Victória Climaco Reis dos Santos,Ana Vitória de Jesus Silva,CEMD,G2,A002,MUITO BOM,8,80
 P9- Mapeamento do atual interesse pela leitura entre jovens estudantes de salvador-ba através de ferramentas da ciência de dado,P09,OR14,OR07,"Roseline Roseline Vanessa Santos Oliveira
 
-",Bruna Victória Climaco Reis dos Santos,Henryque de Jesus dos Santos,CEMCN,G2,A011,OTIMO,8,80
+",Bruna Victória Climaco Reis dos Santos,Henryque de Jesus dos Santos,CEMCN,G2,A011,MUITO BOM,8,80
 P9- Mapeamento do atual interesse pela leitura entre jovens estudantes de salvador-ba através de ferramentas da ciência de dado,P09,OR14,OR07,"Roseline Roseline Vanessa Santos Oliveira
 
-",Bruna Victória Climaco Reis dos Santos,Julia Samara Mendes Ribeiro,CEEV,G1,B010,OTIMO,8,80
+",Bruna Victória Climaco Reis dos Santos,Julia Samara Mendes Ribeiro,CEEV,G1,B010,MUITO BOM,8,80
 "P10 - Dançando correlações
-",P10,OR16,OR15,Karla Patrícia Santos Oliveira Rodriguez Esquerre,Alicia Wyse Ferreira Ribeiro dos Santos,Gabrielle Tereza dos Santos,CEY,G1,A015,OTIMO,8,80
+",P10,OR16,OR15,Karla Patrícia Santos Oliveira Rodriguez Esquerre,Alicia Wyse Ferreira Ribeiro dos Santos,Gabrielle Tereza dos Santos,CEY,G1,A015,MUITO BOM,8,80
 "P10 - Dançando correlações
-",P10,OR16,OR15,Karla Patrícia Santos Oliveira Rodriguez Esquerre,Alicia Wyse Ferreira Ribeiro dos Santos,Isabele Xavier da Silva Bastos,CEY,G2,A017,OTIMO,8,80
+",P10,OR16,OR15,Karla Patrícia Santos Oliveira Rodriguez Esquerre,Alicia Wyse Ferreira Ribeiro dos Santos,Isabele Xavier da Silva Bastos,CEY,G2,A017,MUITO BOM,8,80
 "P10 - Dançando correlações
-",P10,OR16,OR15,Karla Patrícia Santos Oliveira Rodriguez Esquerre,Alicia Wyse Ferreira Ribeiro dos Santos,Júlia dos Santos Barros,CEHMC,G1,A008,OTIMO,8,80
+",P10,OR16,OR15,Karla Patrícia Santos Oliveira Rodriguez Esquerre,Alicia Wyse Ferreira Ribeiro dos Santos,Júlia dos Santos Barros,CEHMC,G1,A008,MUITO BOM,8,80
 P11- Monitoramento de desemprego em STEM na bahia,P11,OR17,OR11,Yago Matheus da Silva Veloso,Laio Luis Barbosa Ribeiro,Fernanda dos Santos Souza Bomfim,CENTRAL,G1,B029,REGULAR,4,40
-P11- Monitoramento de desemprego em STEM na bahia,P11,OR17,OR11,Yago Matheus da Silva Veloso,Laio Luis Barbosa Ribeiro,Guilherme Augusto Santana dos Santos,IFBA,G2,C018,OTIMO,8,80
+P11- Monitoramento de desemprego em STEM na bahia,P11,OR17,OR11,Yago Matheus da Silva Veloso,Laio Luis Barbosa Ribeiro,Guilherme Augusto Santana dos Santos,IFBA,G2,C018,MUITO BOM,8,80
 P11- Monitoramento de desemprego em STEM na bahia,P11,OR17,OR11,Yago Matheus da Silva Veloso,Laio Luis Barbosa Ribeiro,Maria Clara dos Santos Gonçalves,CENTRAL,G1,C012,BOM,5,50
 P12 - As fake news sobre as vacinas da covid-19 e o seu impacto na sociedade,P12,OR19,OR18,"Leornado da Silva de Souza
 
-",Alinne Matos Barreto Souza,Ian Santos do Carmo,CEES,G2,A012,OTIMO,8,80
+",Alinne Matos Barreto Souza,Ian Santos do Carmo,CEES,G2,A012,MUITO BOM,8,80
 P12 - As fake news sobre as vacinas da covid-19 e o seu impacto na sociedade,P12,OR19,OR18,"Leornado da Silva de Souza
 
-",Alinne Matos Barreto Souza,Juliana de Morais Nascimento,CENTRAL,G1,C009,OTIMO,8,80
+",Alinne Matos Barreto Souza,Juliana de Morais Nascimento,CENTRAL,G1,C009,MUITO BOM,8,80
 P12 - As fake news sobre as vacinas da covid-19 e o seu impacto na sociedade,P12,OR19,OR18,"Leornado da Silva de Souza
 
-",Alinne Matos Barreto Souza,Ranald Hermes,CEHMC,G1,B012,OTIMO,8,80
+",Alinne Matos Barreto Souza,Ranald Hermes,CEHMC,G1,B012,MUITO BOM,8,80
 P12 - As fake news sobre as vacinas da covid-19 e o seu impacto na sociedade,P12,OR19,OR18,"Leornado da Silva de Souza
 
-",Alinne Matos Barreto Souza,Yasmin Santana da Silva Souza,CENTRAL,G2,B005,OTIMO,8,80
+",Alinne Matos Barreto Souza,Yasmin Santana da Silva Souza,CENTRAL,G2,B005,MUITO BOM,8,80
 "P13- O impacto da pandemia no ensino das escolas públicas de salvador 
 ",P13,OR18,OR18,Alinne Matos Barreto Souza,Alinne Matos Barreto Souza,Caíque Brito do Rozario,CEMCN,G1,B031,BOM,5,50
 "P13- O impacto da pandemia no ensino das escolas públicas de salvador 
@@ -95,11 +95,11 @@ P12 - As fake news sobre as vacinas da covid-19 e o seu impacto na sociedade,P12
 ",P13,OR18,OR18,Alinne Matos Barreto Souza,Alinne Matos Barreto Souza,Victória Nascimento dos Santos,CEMATF,G1,A014,BOM,5,50
 P14 - Um passeio pela inteligência artificial nas feiras de ciências. (clube de ciência),P14,OR21,OR02,Cedma Ranielly Santos Firmino,"Carolaine Costa da Silva 
 
-",Gabrielle Santos Pinheiro,CEEV,G2,A003,OTIMO,8,80
+",Gabrielle Santos Pinheiro,CEEV,G2,A003,MUITO BOM,8,80
 P14 - Um passeio pela inteligência artificial nas feiras de ciências. (clube de ciência),P14,OR21,OR02,Cedma Ranielly Santos Firmino,"Carolaine Costa da Silva 
 
 ",Juliana Fernandes dos Santos,CENTRAL,G1,C010,NA,NA,NA
-P15 - Acessibilidade no Ambiente Escolar,P15,OR21,OR03,Cedma Ranielly Santos Firmino,Assuero Valinas Lopo,Belle Mariane ,CEEV,G1,C002,NA,NA,NA
+P15 - Acessibilidade no Ambiente Escolar,P15,OR21,OR03,Cedma Ranielly Santos Firmino,Assuero Valinas Lopo,Belle Mariane ,CEEV,G1,C002,MUITO BOM,7,70
 P15 - Acessibilidade no Ambiente Escolar,P15,OR21,OR03,Cedma Ranielly Santos Firmino,Assuero Valinas Lopo,Davi Mota Cardoso da Cruz,CEEV,G1,C005,MUITO BOM,7,70
-P15 - Acessibilidade no Ambiente Escolar,P15,OR21,OR03,Cedma Ranielly Santos Firmino,Assuero Valinas Lopo,Isabel Cristina Pinho dos Santos,CEHMC,G1,C008,OTIMO,8,80
+P15 - Acessibilidade no Ambiente Escolar,P15,OR21,OR03,Cedma Ranielly Santos Firmino,Assuero Valinas Lopo,Isabel Cristina Pinho dos Santos,CEHMC,G1,C008,MUITO BOM,8,80
 P15 - Acessibilidade no Ambiente Escolar,P15,OR21,OR03,Cedma Ranielly Santos Firmino,Assuero Valinas Lopo,Janaína Batista Santos,CEMN,G1,B026,MUITO BOM,7,70
