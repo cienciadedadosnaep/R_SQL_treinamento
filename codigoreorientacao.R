@@ -60,7 +60,7 @@ dadoscd2022 %>%
   ##  Notas e frequencia
   library(ggplot2)
   library(bbplot)
-  dadoscd2022 %>% 
+  dadospicd %>% 
     mutate(qualitativog1 = factor(qualitativog1,levels=c( 
       "INSATISFATORIO","REGULAR",
       "BOM","MUITO BOM","OTIMO"))) %>%
@@ -68,12 +68,30 @@ dadoscd2022 %>%
     filter(quantitativog1>0) %>%
     #  select(freq_perc,`%p`) %>% 
     ggplot(aes(x=grupo,y = quantitativog1,fill=grupo))+
-    geom_jitter(aes(colour=qualitativog1,size=freq_perc,fill=grupo),width=0.1)+
-    geom_boxplot(width=0.2,alpha=0.2)
-  #  xlim(0, 2)+
-  #  bbc_style()
-  ggsave('figuras/boxplotg1g2.png')
+    geom_jitter(aes(colour=Qualificativo,size=4,fill=grupo),width=0.1)+
+    geom_boxplot(width=0.2,alpha=0.2)+
+    xlab("")+
+    ylab("")+
+    labs(caption = "Fonte de dados:  Instituto Nacional 
+       de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)")+
+    ggtitle("Avaliação CD e comportamento em PI")+
+    theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+    theme(axis.title.y = element_text(color = "black",size = 16))+
+    theme(axis.title.x = element_text(color = "black",size = 16))+
+    theme(axis.text.y=element_text(size=16)) +
+    theme(axis.text = element_text(size = 16))  +
+    theme(legend.text = element_text(size = 14)) +
+    theme(legend.title = element_text(size = 16)) +
+    #  xlim(0, 2)+
+  bbc_style()+
+    theme(legend.position = "none")
+    
+  ggsave('figuras/boxplotg1quanticd_vs_qualipi.png')
   
+  ## observacoes 
+  ## 4 estudantes regulares aparecem de forma anômala quanto a 
+  ## avaliacao de PI. Lívia fez trabalho sobre residuos sólidos e foi 
+  ## a univa a apresentar. Adicionalmente o trabalho foi elogiado. 
   
   
   
@@ -129,5 +147,49 @@ dadoscd2022 %>%
   
   
   
+  ################################
   
+  dadospicd %>% 
+    mutate(qualitativog1 = factor(qualitativog1,levels=c( 
+      "INSATISFATORIO","REGULAR",
+      "BOM","MUITO BOM","OTIMO"))) %>%
+    filter(grupo %in% c('G1')) %>%
+    filter(quantitativog1>0) %>%
+    select(qualitativog1) %>%
+    group_by(qualitativog1) %>% 
+    ggplot(aes(y=qualitativog1)) +
+    geom_bar()+
+    bbc_style()
+  
+  
+  
+  ##############################################################################
+  ##  Notas e frequencia
+  library(ggplot2)
+  library(bbplot)
+  dadospicd %>% 
+    mutate(qualitativog1 = factor(qualitativog1,levels=c( 
+      "INSATISFATORIO","REGULAR",
+      "BOM","MUITO BOM","OTIMO"))) %>%
+    filter(grupo %in% c('G2')) %>% 
+    filter(quantitativog2>0) %>%
+    #  select(freq_perc,`%p`) %>% 
+    ggplot(aes(x=grupo,y = quantitativog2,fill=grupo))+
+    geom_jitter(aes(colour=Qualificativo,size=4,fill=grupo),width=0.1)+
+    geom_boxplot(width=0.2,alpha=0.2)+
+    xlab("")+
+    ylab("")+
+    labs(caption = "Fonte de dados:  Instituto Nacional 
+       de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)")+
+    ggtitle("Avaliação CD e comportamento em PI")+
+    theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+    theme(axis.title.y = element_text(color = "black",size = 16))+
+    theme(axis.title.x = element_text(color = "black",size = 16))+
+    theme(axis.text.y=element_text(size=16)) +
+    theme(axis.text = element_text(size = 16))  +
+    theme(legend.text = element_text(size = 14)) +
+    theme(legend.title = element_text(size = 16)) +
+    #  xlim(0, 2)+
+    bbc_style()+
+    theme(legend.position = "none")
   
