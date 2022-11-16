@@ -1,8 +1,11 @@
 #00 - biblioteca
 
 library(readr)
-
 library(dplyr)
+library(devtools)
+devtools::install_github('bbc/bbplot')
+
+
 
 #01 - Leitura Banco de Dados
 
@@ -54,10 +57,7 @@ dadoscd2022 %>%
 #  bbc_style()
   ggsave('figuras/boxplotg1g2.png')
 
-  
-  ## Mapa das escolas com respectivos IDEBs 
-  
-  ##  Notas e frequencia
+    ##  Notas e frequencia
   library(ggplot2)
   library(bbplot)
   dadospicd %>% 
@@ -165,34 +165,6 @@ dadoscd2022 %>%
   
   ##############################################################################
   ##  Notas e frequencia
-  library(ggplot2)
-  library(bbplot)
-  dadospicd %>% 
-    mutate(qualitativog1 = factor(qualitativog1,levels=c( 
-      "INSATISFATORIO","REGULAR",
-      "BOM","MUITO BOM","OTIMO"))) %>%
-    filter(grupo %in% c('G2')) %>% 
-    filter(quantitativog2>0) %>%
-    #  select(freq_perc,`%p`) %>% 
-    ggplot(aes(x=grupo,y = quantitativog2,fill=grupo))+
-    geom_jitter(aes(colour=Qualificativo,size=4,fill=grupo),width=0.1)+
-    geom_boxplot(width=0.2,alpha=0.2)+
-    xlab("")+
-    ylab("")+
-    labs(caption = "Fonte de dados:  Instituto Nacional 
-       de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)")+
-    ggtitle("Avaliação CD e comportamento em PI")+
-    theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
-    theme(axis.title.y = element_text(color = "black",size = 16))+
-    theme(axis.title.x = element_text(color = "black",size = 16))+
-    theme(axis.text.y=element_text(size=16)) +
-    theme(axis.text = element_text(size = 16))  +
-    theme(legend.text = element_text(size = 14)) +
-    theme(legend.title = element_text(size = 16)) +
-    #  xlim(0, 2)+
-    bbc_style()+
-    theme(legend.position = "none")
-  
   
   
   ################################IDEB_SSA#####################################
