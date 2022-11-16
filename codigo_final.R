@@ -26,6 +26,8 @@ library(bbplot)
   dfesc_parc <- data.frame(codigos_inep_parceiras,colegiosp_siglas)
 
   
+#Boxplot G1
+  
   dadoscd2022 %>% 
     mutate(qualitativog1 = factor(qualitativog1,levels=c("OTIMO","MUITO BOM","BOM",
                                                          "REGULAR","INSATISFATORIO"))) %>%
@@ -53,4 +55,33 @@ library(bbplot)
   #  bbc_style()
   ggsave('figuras/boxplot_G1_QUANT_CD_QUALI_CD.png')
   
+  
+  #Boxplot G2
+  
+  dadoscd2022 %>% 
+    mutate(qualitativog2 = factor(qualitativog2,levels=c("OTIMO","MUITO BOM","BOM",
+                                                         "REGULAR","INSATISFATORIO"))) %>%
+    filter(grupo %in% c('G2')) %>% 
+    filter(quantitativog2>0) %>%
+    #  select(freq_perc,`%p`) %>% 
+    ggplot(aes(x=grupo,y = quantitativog2,fill=grupo))+
+    geom_jitter(aes(colour=qualitativog2,size=freq_perc),width=0.1)+
+    geom_boxplot(width=0.2,alpha=0.02) +
+    xlab("")+
+    ylab("%")+
+    labs(caption = "Fonte de dados: Projeto Ciência de Dados na Educação Pública ")+
+    ggtitle("Avaliações de Ciência de Dados")+
+    theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+    theme(axis.title.y = element_text(color = "black",size = 16))+
+    theme(axis.title.x = element_text(color = "black",size = 16))+
+    theme(axis.text.y=element_text(size=16)) +
+    theme(axis.text = element_text(size = 16))  +
+    theme(legend.text = element_text(size = 14)) +
+    theme(legend.title = element_text(size = 16)) +
+    theme(legend.position = "none")+
+    scale_color_manual(values=c("#303600","#a5c500" ,"#d4c78c","#5ec6f2","003468"),
+                       labels = c("OTIMO","MUITO BOM","BOM","REGULAR","INSATISFATORIO"))+
+    ylim(0, 100)
+  #  bbc_style()
+  ggsave('figuras/boxplot_G2_QUANT_CD_QUALI_CD.png')
   
