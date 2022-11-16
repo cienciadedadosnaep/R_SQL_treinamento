@@ -130,10 +130,10 @@ dadoscd2022 %>%
     group_by(grupo) %>% 
     summarise(n_part =n()) 
   #### final de 2022
-  dadospi2022 %>% select(grupo) %>% 
-    group_by(grupo) %>% 
-    summarise(n_part =n())
-  
+  dadospi2022 %>% select(grupo_pi) %>%
+    group_by(grupo_pi) %>%
+      summarise(n_part =n())
+
   ### Estudante do G2 com frequência inferior a 75%
   
   dadoscd2022 %>% filter(grupo %in% c('G2')) %>%
@@ -192,4 +192,43 @@ dadoscd2022 %>%
     #  xlim(0, 2)+
     bbc_style()+
     theme(legend.position = "none")
+  
+  
+  
+  ################################IDEB_SSA#####################################
+  library(bbplot)
+  library(ggplot2)
+  library(ggjoy)
+
+    idebssa %>%
+    filter(ano %in% c(2019)) %>%
+    filter(anos_escolares %in% c("finais (6-9)")) %>%
+    mutate(ano = as.factor(ano)) %>%
+    mutate(id_escola = as.factor(id_escola)) %>%
+    mutate(`Ensino Fundamental` = anos_escolares) %>%
+    mutate(cor = if_else(id_escola %in% codigos_inep_parceiras,'parceiras','outras')) %>%
+#    group_by(ano,id_escola,anos_escolares) %>%
+      group_by(cor) %>% 
+    ggplot(aes(x=ideb, y=ano,fill=`Ensino Fundamental`)) +
+    geom_joy(scale = 5, rel_min_height = 0.01) +
+    geom_point(aes(x=ideb,y=ano,color=cor,size=8))+  
+    scale_x_continuous(expand = c(0.00, 0)) +
+    scale_y_discrete(expand = c(0.00, 0))+
+    scale_color_manual(values = c("outras" = "white", "parceiras" = "blue"))+
+    #    scale_y_discrete(labels = Ano)+
+    xlab("Ideb")+
+    ylab("")+
+    labs( subtitle = "Ensino Fundamental anos:", caption = "Fonte de dados:  Instituto Nacional 
+       de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)")+
+    ggtitle("Ideb das escolas de Salvador")+
+    theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+    theme(axis.title.y = element_text(color = "black",size = 16))+
+    theme(axis.title.x = element_text(color = "black",size = 16))+
+    theme(axis.text.y=element_text(size=16)) +
+    theme(axis.text = element_text(size = 16))  +
+    theme(legend.text = element_text(size = 14)) +
+    theme(legend.title = element_text(size = 16)) +
+    theme(legend.position = "bottom")  +
+    bbc_style()
+  ggsave('figuras/report_idebaif.png')        
   
