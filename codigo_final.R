@@ -1,9 +1,12 @@
 library(ggplot2)
 library(bbplot)
 library(readr)
+library(ggrepel)
 library(dplyr)
+library(lubridate)
+library(formattable)
+library(tidyr)
 
-  
 #01 - Leitura Banco de Dados
   
   
@@ -26,7 +29,7 @@ library(dplyr)
   dfesc_parc <- data.frame(codigos_inep_parceiras,colegiosp_siglas)
 
   
-#Boxplot G1
+#Boxplot G1  AVALIACAO - REORIENTACAO CIENCIA DE DADOS
   
   dadoscd2022 %>% 
     mutate(qualitativog1 = factor(qualitativog1,levels=c("OTIMO","MUITO BOM","BOM",
@@ -48,7 +51,6 @@ library(dplyr)
     theme(axis.text = element_text(size = 16))  +
     theme(legend.text = element_text(size = 14)) +
     theme(legend.title = element_text(size = 16)) +
-#    theme(legend.position = "none")+
     scale_color_manual(name="",values=c("#303600","#a5c500" ,"#d4c78c","#5ec6f2","003468"),
                        labels = c("OTIMO","MUITO BOM","BOM","REGULAR","INSATISFATORIO"))+
     ylim(0, 100)
@@ -56,7 +58,7 @@ library(dplyr)
   ggsave('figuras/boxplot_G1_QUANT_CD_QUALI_CD.png')
   
   
-  #Boxplot G2
+  #Boxplot G2  AVALIACAO - REORIENTACAO CIENCIA DE DADOS
   
   dadoscd2022 %>% 
     mutate(qualitativog2 = factor(qualitativog2,levels=c("OTIMO","MUITO BOM","BOM",
@@ -78,7 +80,6 @@ library(dplyr)
     theme(axis.text = element_text(size = 16))  +
     theme(legend.text = element_text(size = 14)) +
     theme(legend.title = element_text(size = 16)) +
-#    theme(legend.position = "none")+
     scale_color_manual(name="",values=c("#303600","#a5c500" ,"#d4c78c","#5ec6f2","003468"),
                        labels = c("OTIMO","MUITO BOM","BOM","REGULAR","INSATISFATORIO"))+
     ylim(0, 100)
@@ -89,7 +90,7 @@ library(dplyr)
   
   
   
-  #Boxplot G2 com anotações de PI
+ #Boxplot G2  AVALIACAO - REORIENTACAO CIENCIA DE DADOS C/ ANOTACOES PI
   
   dadoscd2022 %>% 
     mutate(qualitativog2 = factor(qualitativog2,levels=c("OTIMO","MUITO BOM","BOM",
@@ -118,14 +119,9 @@ library(dplyr)
   #  bbc_style()
   ggsave('figuras/boxplot_G2_QUANT_CD_QUALI_CD.png')
   
-  #############################################################################
+#############################################################################
+# IDADE DOS ESTUDANTES DO GRUPO G1
   
-  library(dplyr)
-  library(lubridate)
-  library(ggplot2)
-  library(bbplot)
-  
-# Idade dos estudantes do grupo G1
 dados_pessoais %>% filter(grupo %in% c('G1')) %>%  
   summarise(idade = 
               round(as.numeric(as_date("2022-11-18")
@@ -137,7 +133,9 @@ dados_pessoais %>% filter(grupo %in% c('G1')) %>%
 ggsave('figuras/dotplot_idade_G1_CD.png')
 
 
-# Idade dos estudantes do grupo G2
+
+##############################################################################
+# IDADE DOS ESTUDANTES DO GRUPO G2
 
 dados_pessoais %>% filter(grupo %in% c('G2')) %>%  
   summarise(idade = 
@@ -150,8 +148,8 @@ dados_pessoais %>% filter(grupo %in% c('G2')) %>%
   xlim(13,19)
 ggsave('figuras/dotplot_idade_G2_CD.png')
 
-
-# Idade dos estudantes do grupo G1 e G2
+###############################################################################
+# IDADE DOS ESTUDANTES DO GRUPO G1 e G2
 
 dados_pessoais %>%
   group_by(grupo) %>% 
@@ -170,7 +168,8 @@ dados_pessoais %>%
 ggsave('figuras/dotplot_idade_G1_G2_CD.png')
 
 
-######################################################################
+###############################################################################
+# DOTPLOT BOXPLOT DO QUANTITATIVO G1 POR SEXO 
 
 ID_G1 <- dadospicd %>% filter(grupo_pi %in% c("G1")) %>% select(ID) 
 ID_G2 <- dadospicd %>% filter(grupo_pi %in% c("G2")) %>% select(ID)
@@ -191,8 +190,6 @@ dados_pessoais %>%
                     labels = c("F","M"))
 
 ggsave('figuras/dotplot_idade_G1_SEXO_CD.png')
-
-
 
 
 dadospicd %>% 
@@ -216,16 +213,12 @@ dadospicd %>%
   theme(axis.text = element_text(size = 16))  +
   theme(legend.text = element_text(size = 14)) +
   theme(legend.title = element_text(size = 16)) +
-  #    theme(legend.position = "none")+
-#  scale_color_manual(name="",values=c("#303600","#a5c500" ,"#d4c78c","#5ec6f2","003468"),
-#                     labels = c("OTIMO","MUITO BOM","BOM","REGULAR","INSATISFATORIO"))+
   ylim(0, 100)
 #  bbc_style()
 
 
 ########################################################################
-
-library(ggrepel)
+# PALETA E CORES DE WERNER
 
 werner_colors = c("#f1e9cd",
                  "#cbc8b7",
@@ -243,20 +236,16 @@ werner_colors = c("#f1e9cd",
                  "#b74a70",
                  "#c39e6d")
 
-
+#################################################################################
+# REORIENTACOES DE PI E CE E IDENTIFICACAO DO PROJETO 
 set.seed(42)
 dadospicd %>% 
   mutate(qualitativog1 = factor(qualitativog1,levels=c("OTIMO","MUITO BOM","BOM",
                                                        "REGULAR","INSATISFATORIO"))) %>%
   filter(grupo %in% c("G1")) %>%
   filter(quantitativog1>0) %>%
-#  filter(COD_PROJ %in% c("P09")) %>%
-  #  filter(quantitativog2>0) %>%
-  #  select(freq_perc,`%p`) %>% 
   ggplot(aes(x=nota_perc,y = quantitativog1,colour=COD_PROJ))+
   geom_point(size=6)+
-#  geom_boxplot(width=0.2,alpha=0.02) +
-#  geom_jitter(aes(colour=COD_PROJ),width=0.25,size=6)+
   xlab("Nota PI (%)")+
   ylab("NOTA CD (%)")+
   theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
@@ -270,18 +259,6 @@ dadospicd %>%
   ylim(25, 100)+
   xlim(25, 100)+
   bbc_style()+
-#annotate(
-#  geom = "curve", 
-#  x = dadospicd$nota_perc+sign(rnorm(n = 1,0,1))*rpois(1,3), 
-#  y = dadospicd$quantitativog1, 
-#  xend = dadospicd$nota_perc+sign(rnorm(n = 1,0,1))*rpois(1,3), 
-#  yend = dadospicd$quantitativog1+sign(rnorm(n = 1,0,1))*rpois(1,3),
-#  curvature = .3, 
-#  arrow = arrow(length = unit(2, "mm"))) +
-#  annotate(geom = "text", 
-#           x = dadospicd$nota_perc, 
-#           y = dadospicd$quantitativog1, 
-#           label = dadospicd$COD_PROJ, hjust = "center")+
   geom_label_repel(aes(label=COD_PROJ), 
                    xlim=c(25,100), ylim=c(25,100))+
   theme(legend.position = "none")+
@@ -296,7 +273,149 @@ dadospicd %>%
 
 ggsave('figuras/dispersao_Notax_PI_Notay_CD_class_proj.png')
 
+################################################################################
+# BOXPLOT DOS DADOS DAS AVALIACOES DE REORIENTACAO 
+
+dadospicd %>% 
+  mutate(qualitativog1 = factor(qualitativog1,levels=c("OTIMO","MUITO BOM","BOM",
+                                                       "REGULAR","INSATISFATORIO"))) %>%
+  filter(grupo %in% c("G1")) %>%
+  filter(quantitativog1>0) %>%
+  ggplot(aes(x=nota_perc,y = quantitativog1,colour=escola))+
+  geom_point(size=6)+
+  xlab("Nota PI (%)")+
+  ylab("NOTA CD (%)")+
+  theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+  theme(axis.title.y = element_text(color = "black",size = 16))+
+  theme(axis.title.x = element_text(color = "black",size = 16))+
+  theme(axis.text.y=element_text(size=16)) +
+  theme(axis.text = element_text(size = 16))  +
+  theme(legend.text = element_text(size = 14)) +
+  theme(legend.title = element_text(size = 16)) +
+  theme(legend.position = "none")+
+  ylim(25, 100)+
+  xlim(25, 100)+
+  bbc_style()+
+  geom_label_repel(aes(label=escola), 
+                 xlim=c(25,100), ylim=c(25,100))+
+  theme(legend.position = "none")+
+  labs(title = "Avaliações",
+       subtitle = "Ciência de Dados e Práticas Investigativas",
+       caption = "Fonte de dados: Projeto Ciência de Dados na Educação Pública")
 
 
+ggsave('figuras/dispersao_Notax_PI_Notay_CD_class_escola.png')
 
     
+#########################################################################
+# BOXPLOT DADOS DAS AVALIACOES DE REORIENTACAO G1 DESAGEGADO POR ESCOLA
+
+dadospicd %>% 
+  mutate(qualitativog1 = factor(qualitativog1,levels=c("OTIMO","MUITO BOM","BOM",
+                                                       "REGULAR","INSATISFATORIO"))) %>%
+  filter(grupo %in% c("G1")) %>%
+  filter(quantitativog1>0) %>%
+  #  filter(COD_PROJ %in% c("P09")) %>%
+  #  filter(quantitativog2>0) %>%
+  #  select(freq_perc,`%p`) %>% 
+  ggplot(aes(x=nota_perc,y = quantitativog1,colour=escola))+
+  geom_point(size=)+
+  xlab("Nota PI (%)")+
+  ylab("NOTA CD (%)")+
+  theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+  theme(axis.title.y = element_text(color = "black",size = 16))+
+  theme(axis.title.x = element_text(color = "black",size = 16))+
+  theme(axis.text.y=element_text(size=16)) +
+  theme(axis.text = element_text(size = 16))  +
+  theme(legend.text = element_text(size = 14)) +
+  theme(legend.title = element_text(size = 16)) +
+  theme(legend.position = "none")+
+  ylim(25, 100)+
+  xlim(25, 100)+
+  bbc_style()+
+  geom_label_repel(aes(label=escola), 
+                 xlim=c(25,100), ylim=c(25,100))+
+  theme(legend.position = "none")+
+  labs(title = "Avaliações",
+       subtitle = "Ciência de Dados e Práticas Investigativas",
+       caption = "Fonte de dados: Projeto Ciência de Dados na Educação Pública")
+
+
+ggsave('figuras/dispersao_Notax_PI_Notay_CD_class_escola_idade.png')
+
+
+#########################################################################
+# JUNCAO DE DADAS TABELAS DE DADOS PESSOAIS E CD E IA
+
+# Reuniao das duas tabelas  
+dadospicdpessoais<- full_join(dadospicd,dados_pessoais,"ID")
+
+
+# Idade dos estudantes do grupo G1
+dadospicdpessoais %>% 
+#  group_by(escola) %>%
+  summarise(grupo.x=grupo.x,escola=escola,idade = 
+              round(as.numeric(as_date("2022-11-18")
+                               -as_date((nascimento)))/365)) %>%
+  filter(grupo.x %in% c("G1")) %>%
+  filter(idade>0) %>%
+  group_by(escola) %>%
+  ggplot(aes(x=idade,y = escola))+
+  geom_jitter(aes(colour=escola,size=8),width=0.1)+
+  bbc_style()+
+  xlab("Idade")+
+  ylab("")+
+  theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+  theme(axis.title.y = element_text(color = "black",size = 16))+
+  theme(axis.title.x = element_text(color = "black",size = 16))+
+  theme(axis.text.y=element_text(size=16)) +
+  theme(axis.text = element_text(size = 16))  +
+  theme(legend.text = element_text(size = 14)) +
+  theme(legend.title = element_text(size = 16)) +
+  theme(legend.position = "none")
+  
+  
+ggsave('figuras/dotplot_idade_escola_G1_CD.png')
+
+
+###############################################################################
+# TABELA DE PROJETOS 
+
+dadospicdpessoais %>% select(COD_PROJ,projetos) %>%
+  distinct() %>%
+  na.omit() %>%
+  arrange(COD_PROJ) %>%
+  formattable(align = c("l","l")) 
+
+
+###############################################################################
+# BOXPLOT AVALIACAO - REORIENTACAO G1 DESAGREGADO POR SEXO
+dadospicdpessoais %>% 
+  mutate(qualitativog1 = factor(qualitativog1,levels=c("OTIMO","MUITO BOM","BOM",
+                                                       "REGULAR","INSATISFATORIO"))) %>%
+  filter(grupo.x %in% c('G1')) %>% 
+  filter(quantitativog1>0) %>%
+  #  select(freq_perc,`%p`) %>% 
+  ggplot(aes(x=sexo,y = quantitativog1,fill=sexo))+
+  geom_boxplot(width=0.2,alpha=0.02) +
+  geom_jitter(aes(colour=sexo,size=freq_perc),width=0.1)+
+  xlab("sexo")+
+  ylab("%")+
+  labs(caption = "Fonte de dados: Projeto Ciência de Dados na Educação Pública ")+
+  ggtitle("Avaliações de Ciência de Dados")+
+  theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+  theme(axis.title.y = element_text(color = "black",size = 16))+
+  theme(axis.title.x = element_text(color = "black",size = 16))+
+  theme(axis.text.y=element_text(size=16)) +
+  theme(axis.text = element_text(size = 16))  +
+  theme(legend.text = element_text(size = 14)) +
+  theme(legend.title = element_text(size = 16)) +
+      theme(legend.position = "none")+
+  ylim(25, 100)+
+  bbc_style()+
+theme(legend.position = "none")
+  
+ggsave('figuras/boxplot_G1_QUANT_CD_QUALI_CD_SEXO.png')
+
+
+
