@@ -1,0 +1,806 @@
+Ciência de Dados na Educação Pública
+
+Relatório Executivo 2022
+
+Panorama
+Letrar-se em dados, especialmente em ciência de dados, é um desafio que foge ao senso comum. É necessário acessar os mecanismos que constituem a produção dos dados, seus propósitos, interesses, dúvidas e incertezas sobre suas representações. Adicionado a essas características fundamentais, percorre-se um contexto em que a produção de tais dados é cada vez mais rápida, exigindo mais recursos materiais e energéticos para preservá-los e comunicá-los. O aprofundamento dessa realidade ainda posiciona o debate de educadores e estudantes no âmbito de grandes avanços de tecnologias digitais, que tornam a sociedade mais suscetível à privacidade, à inclusão ou à representatividade de grupos. Assim, busca-se o desenvolvimento de habilidades que possibilitem entender dados, sem ser enganadas/os por desinformação e notícias falsas. Como educadores, devemos não apenas prepará-las/os para o contexto de pós-verdades, como também para debates sobre políticas públicas, descobertas médicas, economia, meio ambiente, justiça social, entre outros. Desse modo, o Programa Ciência de Dados na Educação Pública pondera a conexão da tecnologia da informação com a realidade das/os estudantes da educação pública, revelando, por meio da exploração, modelagem de dados e do pensamento científico, informações que as/os permitem compreender as dinâmicas da cidade em que vivem e da sociedade, tanto no âmbito real, quanto no virtual. Intenta-se, assim, a formação de jovens cidadãs/ãos com anseios e competências para liderar ações que contribuam para a construção de uma nova cidade, de uma nova sociedade, muito além da que conhecemos.
+
+“Conhecer e experimentar, para compreender e transformar.”
+Meninas na Ciência de Dados / Ciência de Dados na Educação Pública, desde 2019
+
+
+
+Apresentação
+
+O Programa Ciência de Dados na Educação Pública foi iniciado em 2020, como uma ampliação do Projeto Meninas na Ciência de Dados, o qual passou a abraçar estudantes dos ensinos fundamental II e médio, sem distinção de sexo, de escolas públicas de Salvador. Idealizado e liderado pela professora Karla Esquerre e por seu grupo de pesquisa Gamma-UFBA, a iniciativa conta com a participação de professores, estudantes e profissionais da UFBA, instituições parceiras e vários grupos de pesquisa. As ações desenvolvidas de janeiro a dezembro de 2022 por esse coletivo estão sintetizadas neste documento.				
+			
+		
+
+
+Público Alvo
+
+O ano de 2022 foi configurado pelo retorno ao modelo presencial para as atividades de ensino, inclusive para o Programa Ciência de Dados na Educação Pública, sem perder de vista todas as aprendizagens promovidas pelo contexto pandêmico. Assim, respeitando a dinâmica das escolas parceiras, que possuem atividades tanto em turno matutino e vespertino, quanto nos dois, o Programa promoveu atividades com os estudantes aos sábados, atuando em duas linhas: a primeira consistia no mesmo modelo dos anos anteriores, a qual desenvolveu habilidades e competências em ciência de dados, sem a necessidade estrita de uso de computadores em estudantes, interseccionando com Inteligência Artificial e Protagonismos social, racial e de gênero, esse grupo foi denominado G1. Concomitantemente, foram selecionados/as estudantes que já tinham participado da formação basilar em anos anteriores para compor um curso com práticas de ciência de dados associadas a elementos de lógica, algoritmos e programação, por meio da linguagem Python, no ambiente Google Colaboratory (Colab), tal grupo foi nomeado de G2.
+Com o apoio das escolas parceiras, 57 estudantes foram selecionados para participar do Programa Ciência de Dados na Educação Pública, sendo distribuídos 45 para o grupo G1, 12 para o grupo G2. Entretanto, ao longo do primeiro semestre, foram identificados/as estudantes que não estavam completamente engajados, seja por demandas pessoais, estudantis ou por, após conhecerem a ciência de dados, não desejarem continuar a formação, ainda que a equipe tenha gerado muitos estímulos, boa comunicação, escuta qualificada e sensível e diversificação de atividades. Por isso, o segundo semestre iniciou com apenas 46 estudantes, sendo 34 do grupo G1 e mantidos os 12 estudantes do grupo G2. 
+No G1, os encontros liderados pela equipe de Inteligência Artificial (IA) foram conduzidos de maneira lúdica, através da experimentação de ferramentas gratuitas, disponíveis na web, e interação de materiais desplugados para facilitar a materialização dos conceitos abordados. Buscou-se estimular a capacidade de identificar o que é a Inteligência Artificial em meio a tantas tecnologias disponíveis e o senso crítico através da provocação sobre os benefícios, riscos e vieses envolvidos nessa área.
+Já as equipes de Práticas investigativas e Protagonismos trabalharam com os dois grupos (G1 e G2). Esta, voltou-se para as questões sociais e de gênero, a partir de dinâmicas que estimularam (trans)formações tanto individualmente quanto coletivamente, além de proposições para subversão de opressões secularmente impostas a grupos marginalizados. Já aquela, empenhou esforços para a formação científica e para a construção de projetos de ciência, propostos e desenvolvidos pelas/os estudantes. Para tanto, problemas do cotidiano foram explorados e ressignificados como  oportunidades de melhorias.
+
+
+
+Objetivos 
+
+Gerais
+
+Desenvolver o pensamento crítico, reflexivo e a formação cidadã nas áreas de ciência de dados, inteligência artificial, protagonismos social, racial e de gênero e práticas investigativas.
+
+Específicos
+
+Promover um ambiente diverso para a inserção dos estudantes ao pensamento crítico, letramento matemático, estatístico e computacional nos espaços dos dados e tecnologias digitais;
+Proporcionar reflexões para o reconhecimento de problemas sociais que merecem atenção de métodos estatísticos matemáticos;
+Estimular o pensamento estatístico na formulação de problemas; 
+Compreender os processos metodológicos do ciclo de dados como ferramenta para apoiar as decisões
+Desenvolver problemas que estimulem habilidades computacionais para manipular, filtrar e transformar;
+Experimentar e reconhecer a ciência de dados como forma de linguagem para identificar e comunicar informações;
+Refletir sobre formas como os dados pessoais são transferidos e utilizados para influenciar as nossas decisões; 
+Conhecer formas de classificar dados e compreender os fundamentos da representação de dados por meio de modelos.
+Entender o conceito da IA;
+Perceber como a IA está presente em nosso cotidiano;
+Identificar como uma IA aprende e o viés algorítmico; 
+Reconhecer as subáreas da IA; 
+Discutir como percebemos o ambiente a nossa volta, como a IA está presente em nossa vida e como ela pode ajudar a solucionar problemas da nossa sociedade
+Propiciar o conhecimento, a reflexão e a discussão acerca de problemas sociais;
+Propor intervenções sociais nos âmbitos individual e coletivo;
+Compreender a função do Estado para a comunidade e as leis que regulam as relações sociais; 
+Promover a adoção de valores éticos e morais, respeitando a diversidade e a liberdade de expressão;
+Engajar para lutas sociais – contra o machismo, o sexismo, a misoginia, o racismo, o capacitismo e tantos outros processos de segregação;
+Analisar problemas a partir dos vieses legais, históricos, sociais, combatendo o senso comum;
+Exercitar o respeito, a solidariedade, a empatia e o compartilhamento de informações;
+Desenvolver o espírito de liderança;
+Reconhecer sistemas sociais de segregação e opressão;
+Resolver situações-problema para compreensão dos conteúdos abordados.  
+Discutir sobre a importância da resolução de problemas sociais a partir de projetos de ciências, fundamentados em dados e informações quantitativas e qualitativas;
+Promover um ambiente adequado incentivando-os(as) a utilizar todos os recursos disponíveis para elaborações de materiais;
+Proporcionar a aprendizagem de técnicas e métodos de pesquisa;
+Estimular o desenvolvimento do pensar cientificamente e da criatividade, decorrentes das condições criadas pelo confronto direto com os problemas de pesquisa.
+Temáticas abordadas 
+
+Manuseio e lida com dados;
+Curiosidade numérico-computacional e motivar a aprendizagem;
+Identificação de diferentes fontes e formas de apresentação dos dados;
+Enumeração de usos (econômicos, políticos etc.) de dados;
+Definição de “rastro digital”;
+Privacidade de dados pessoais;
+Definição de “ciclo de dados”;
+Reconhecimento do uso de recursos físicos nas soluções que envolvem dados, materialidade do digital;
+Armazenamento de dados;
+Visualização de dados, baseada na interpretação gráfica e comunicação de resultados em forma gráfica;
+Efeitos negativos de vieses nos dados;
+Dados como um recurso de transformação social;
+O uso prático de dados e tecnologia na solução de problemas sociais;
+O pensamento crítico, analítico e estatístico na proposição de soluções;
+Diferença entre correlação e causalidade;
+Estratégias de resolução de problemas em atividades colaborativas;
+Relação entre Ciência a evidências;
+A ciência de dados enquanto carreira e/ou ferramenta cotidiano.  
+Conceitos de Inteligência Artificial e aprendizagem de máquina;
+Elementos de Inteligência Artificial forte e fraca; 
+Noções de visão computacional, processamento de linguagem natural, reconhecimento de voz, robôs inteligentes e aprendizado de máquina aplicados aos problemas da sociedade; 
+Experimentação com aplicações práticas de Inteligência Artificial.
+Identidade de gênero e orientação sexual;
+Educação inclusiva e capacitismo;
+Maternidade: imposição social ou escolha feminina?
+Feminismo e negritude;
+Amor e diversidade;
+Leis de proteção às mulheres;.  
+Introdução à pesquisa científica; 
+Identificação de problemas da sociedade e resoluções de problemas; 
+Palestras com cientistas; 
+Práticas do projeto de pesquisa. 
+Competências e Habilidades 
+	O intento de propiciar aos/às estudantes uma trilha de conhecimentos, atitudes e habilidades para que estivessem capacitados/as ao agenciamento de transformações, intuito compartilhado por todas as equipes do Programa Ciência de Dados na Educação Pública,  permitiu o desenvolvimento de saberes e aptidões para alcance das competências pretendidas. Tal estratégia possibilitou a construção de caminhos para o “saber fazer”. Nesse sentido, buscou-se o desenvolvimento de habilidades cognitivas, capacitando os/as estudantes em relação a aprender aos conteúdos, bem como as habilidades sociais, conectando as possibilidades de se relacionar com a alteridade. A habilidade comunicacional intentou a interação e as conexões de mundo, extrapolando as aprendizagens para além da sala de aulas, promovendo o diálogo com a comunidade, incentivando o espírito de proatividade, liderança e, sobretudo, a potencialidade para instrumentalizá-los a serem agentes de transformações sociais. Assim, compreendendo que a diversidade não está relacionada apenas às questões de gênero, mas está também ao modo como os/as estudantes aprendem, por isso a importância dos exercícios diversificados e mediações com abordagens diferenciadas, privilegiando a conexão com a atualidade e com situações cotidianas.
+
+Nesse contexto, nas mediações de Protagonismo foram levantadas questões sobre Identidade de gênero e orientação sexual; Educação inclusiva e capacitismo; Maternidade; Feminismo e negritude; Amor e diversidade; Leis de proteção às mulheres estiveram conectadas às vivências, aos anseios, ao contexto de mundo que permeia jovens estudantes. Para tanto, foi necessário destituir/desconstruir segregações presentes no senso comum e secularmente repetidas por uma sociedade fundadas nessas bases, mas que inicia e engaja um movimento de desconstrução do patriarcado. Assim, pretendeu-se a mobilização dos conhecimentos mediados para compreensão de opressões e subvertê-las. 
+
+O domínio cognitivo - que engloba as habilidades do conhecimento, dos saberes - visou, em 6 encontros de Protagonismo, trazer uma discussão sobre sobre identidade de gênero, orientação sexual, trans e cisgeneridade; sociedade inclusiva, percepção de inclusão e segregação na sociedade, práticas e expressões capacitistas, a importância da educação na luta anticapacitista; a maternidade como imposição social, o controle dos corpos femininos, a decisão da maternidade pela mulher, a inerência da maternidade às garotas e a possibilidade da paternidade aos garotos, crianças sem o nome do pai na certidão de nascimento; a importância social do feminismo; a proposta de equidade social do feminismo, a desmistificação da compreensão do movimento feminista, a interseccionalidade do feminismo e da negritude, o racismo estrutural, a segregação de mulheres pretas; a concepção romantizada de amor, a destituição do amor como um sentimento limitador, a utilização da ideia de amor por manipuladores/as, a ideia de amor, íntimo proposta por Bell Hooks; a importância das legislações específicas de proteção às mulheres, o conhecimento das leis de proteção para mulheres, como acessar essas leis, o porquê de tais leis serem essenciais à proteção das mulheres. Propiciando, assim, a construção de conceitos, o resgate do percurso histórico e cultural. 
+Já no domínio afetivo - que englobam as atitudes - colaboramos para que as/os estudantes soubessem lidar com sentimentos e emoções em diversos contextos de opressão, bem como o fortalecimento do espírito de liderança e de cooperação, a capacidade de dialogar sobre questões tão sensíveis à sociedade, uma vez que tendo consciência das próprias emoções e atitudes, propiciam uma participação efetiva no processo de aprendizagem.
+
+Em Ciência de Dados, por meio da construção do letramento matemático que, nessa ciência, se expressa como resultado da interseção de competências do campo matemático,  estatístico e computacional, direcionados a proposição e construção de solução de problemas, buscou formar jovens cientistas capazes de tomar decisões baseadas em suas reflexões relacionadas às demandas da sociedade. Isto evidencia a capacidade desse campo do conhecimento para a percepção de cidadania - a partir da ratificação de direitos, frente à percepção de problemas em diversas esferas da sociedade e possíveis soluções, através dos dados nos campos da  Ciência e Tecnologia,  Cidadania e Civismo e  Educação em Direitos Humanos. 
+
+A título de exemplificação da coesão do projeto e as competências  da BNCC, apresentamos o item 6, que sinaliza Competências Específicas para matemática do ensino fundamental: 
+
+“Enfrentar situações-problema em múltiplos contextos, incluindo-se situações imaginadas, não diretamente relacionadas com o aspecto prático-utilitário, expressar suas respostas e sintetizar conclusões, utilizando diferentes registros e linguagens (gráficos, tabelas, esquemas, além de texto escrito na língua materna e outras linguagens para descrever algoritmos, como fluxogramas, e dados).”
+
+Nos estudos sobre Inteligência Artificial, buscou-se propiciar aos/às estudantes repertório para desenvolver habilidades e competências que permitissem compreender, investigar e experimentar o universo da Inteligência Artificial. Sendo assim, as mediações foram realizadas de modo a oportunizar discernimento de tecnologia dotada de Inteligência Artificial. Quando trabalhado os conceitos de Inteligência Artificial, aprendizagem de máquina, elementos de Inteligência Artificial forte e fraca, intentou-se desconstruir a visão robótica/ humanoide, proporcionada pelo cinema, e ampliar a percepção sobre as tecnologias que nos cerca. Ademais, a experimentação por meios de ferramentas interativas e debates acerca de aplicações reais de Inteligência Artificial proporcionaram aos/às estudantes a capacidade de dialogar sobre tecnologias beneficiadas por inteligência e ampliar percepção de como elas podem contribuir para transformar realidades.
+. 
+No âmbito de Práticas Investigativas, o foco foi a produção de projetos. Para tanto, foram exploradas ações que proporcionaram aos jovens uma ampliação referente ao senso de urgência, incluindo, a organização do planejamento de tempo para desenvolvimento dos projetos de ciências, trabalho em equipe e capacidade de sistematização dos resultados dos projetos de pesquisa. Além disso, foi incentivado o espírito de liderança, criatividade, inovação e pesquisa, visto que os agentes principais são os(as) jovens cientistas. Nesse sentido, trabalhou-se para dar total suporte para os/as estudantes durante a estruturação do pensamento crítico, visto que os temas dos projetos foram elaborados por eles/as e, um dos pontos solicitados, foi que todas as pesquisas deveriam incluir uma ou duas áreas do projeto, isto é, teriam que envolver Inteligência Artificial e/ou Ciências de Dados, o que propiciou o desenvolvimento da percepção das diversas inteligências e potencialidades de cada estudante. 
+
+
+
+Metodologias
+
+Metodologia: Ciência de Dados (G1)
+
+Os caminhos seguidos pela equipe para o desenvolvimento de habilidades e competências dos/as estudantes baseia-se, principalmente, nas experiências, nas vivências, nos espaços e problemas conhecidos por eles/as. Fundamentado nessa concepção, concebeu-se uma ideia geral para o desenvolvimento das atividades dos encontros, que iniciavam com uma etapa instigadora - chamada de aquecimento (warm-up). Esta etapa estava dedicada ao engajamento do/a jovem cientista com a discussão temática. Para tanto, eram apresentados materiais diversos, como demonstrado no diagrama esquemático da Figura 01. Assim, foi construída uma ponte com os temas ligados a problemas cotidianos, sociais e de outras áreas de conhecimento.  Após essa etapa, o encontro partia para o uso de dados como caminho de aprofundamento da investigação de problemas baseado nos conceitos de ciência de dados. Essa etapa foi fortalecida pelo uso do site (re)Conhecendo Salvador, que é um dos recursos para auxiliar na ligação entre as temáticas pertinentes à cidade às  habilidades específicas de ciência de dados exploradas. Aliado a tantos outros materiais está o e-book de ciência de dados (em desenvolvimento), Por fim, eram apresentadas dinâmicas de experimentação, medição, representação por meio de elementos da ciência de dados que fortaleceram a capacidade de análise crítica.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figura 01 - Diagrama Esquemático dos elementos metodológicos do curso introdutório de ciência de dados
+
+ 
+
+Assim, a cada encontro, orientados por um monitor geral, com um ou mais monitores auxiliares, os/as jovens cientistas foram observados quanto aos seus avanços, dificuldades, necessidades, criatividades e aplicabilidade dos conceitos.  
+Algumas atividades dedicadas ao grupo G1 incluem grandes temas que envolvem as tecnologias digitais. A seguir apresentamos três propostas de atividades para os desenvolver habildiades e competências do grupo G1:
+ 
+Atividade 1:
+Numa das atividades propostas para este curso, é simulado um sistema de recomendação, através do qual as/os jovens cientistas devem selecionar e assistir um dos trailers de dois filmes nacionais que podem tratar de história, como o filme sobre o ex-deputado Mariguella (Mariguella, 2019) e outro sobre racismo numa sociedade distópico (Medida Provisória, 2020).  As/Os jovens cientistas devem ser chamados aos pares para escolher e avaliar as notas prévias de cada filme e optar por um dos dois e realizar sua própria avaliação do trailer e contribuir com o painel de avaliação. Sendo o processo acessível aos próximos participantes. Assim, é possível discutir sobre as interações dos usuários e a natureza performativa dos algoritimos de recomendação. 
+ 
+Atividade 2:
+A inserção do/a estudante à ciência de dados demanda muitos recursos computacionais e geram uma experiência sem socialização, portanto, menos profunda como característica de cultura ou de formação de tecido cultural. Preocupados com a natureza desse arranjo de cultura digital versus vivência da cidade, o projeto preparou uma atividade que consiste no uso da produção audiovisual de Leandro Veneza, que  valoriza a representação de lugar, cultura, história e feminino, a partir do qual jovens cientistas podem experimentar o uso de recursos digitais, experimentar diferentes tipos de dados e refletir sobre as formas de organização de tais dados num passeio pela vivência de pessoas que preservam a existência da Feira de São Joaquim e suas memórias. 
+ 
+Atividade 3:
+Essa atividade desdobrou-se numa avaliação de uma pesquisa amostral que investigava a questão da desigualdade salarial entre produtores de conteúdo quanto ao seu gênero. Esse elo foi se formando com os avanços das atividades de ciência de dados, havia portanto interconexão destes aprendizados com as disciplinas de protagonismos. 
+ 
+Ao fim do curso, foi proposto uma atividade avaliativa, fundamentada em situações do cotidiano, com temáticas diversificadas,  envolvendo a aplicação de conceitos de ciência de dados como 
+Definição pergunta estatística; 
+Definição de variáveis de estudo da situação problema, 
+Conceitos teóricos de pesquisa amostral;
+Conceitos de probabilidade e análise de histogramas, 
+Consulta e manipulação de dados; 
+Análise e decisão a partir de dados tabelados; 
+Interpretação gráfica de uma série temporal; 
+Avaliação de correlação  e identificação de hipóteses para comportamento aleatório das variáveis analisadas;
+Representação de dados por modelos a partir de uma visualização gráfica dos métodos dos mínimos quadrados.   
+Após a realização da atividade, foi necessário dialogar com o grupo e realinhar algumas ideias sobre ciência de dados. Assim, ficaram evidentes os avanços, as conquistas e os caminhos para continuar aprendendo. 
+
+Metodologia: Ciência de Dados (G2)
+Um curso de ciência de dados, com objetivo de alcançar letramento computacional e pensamento crítico, deve seguir como primeiro caminho a experimentação de ambientes digitais lúdicos ou constituídos de recursos facilitadores para o acesso à linguagem computacional. Neste sentido, o projeto Ciência de Dados na Educação Pública adotou o ambiente computacional Google Colab para vivência dos jovens cientistas. 
+
+Assim como a estrutura metodológica dedicada ao grupo G1, a cada bloco de encontros eram trazidas situações-problema atrativas à necessidade do uso de ciência de dados como possibilidade de análise do problema. Contudo, foi implementada uma etapa adicional que consistia no debate e construção, em linguagem Python, das soluções algorítmicas da ciência de dados. Tal prática colabora para a diversificação de vocabulário computacional e habilidades críticas sobre a própria constituição do dado e suas representações digitais.  
+
+Para a  exploração dos aprendizados em programação, realizou-se uma avaliação das habilidades e competências desenvolvidas ao longo do curso, disponibilizando ao/à estudante o acesso a dados em espaços de dados e a desafios de ciência de dados como Kaggle. Como se trata do desenvolvimento de um código de programação, foi necessário que os jovens cientistas desenvolvessem uma análise dos dados de problema selecionado para o grupo e o apresentassem ao final deste processo de 4 encontros.. A primeira etapa foi constituída da capacidade de o jovem cientista construir o documento da análise, envolvendo sua destreza técnica em programação e ciência de dados, que podem ser declaradas como:
+organização lógica do código no ambiente de programação Google Colab, pela aplicação de Python e conceitos básicos de markdown (elementos de reprodutibilidade e rastreabilidade); 
+uso de funções do Python básicas para consulta de informações gerais (info, shape, head e tail) sobre o banco de dados como número de linhas e colunas, tipos de variáveis e presença ou não de valores faltantes;
+manipulação de dados (pacotes pandas) pela aplicação de funções de localização de dados (loc e iloc), agrupamento de dados (groupby) e reorganização (por exemplo, mudança da ordem de observações em função de uma das variáveis, sort) de banco de dados ou subconjunto de dados;
+capacidade de responder questões propostas para a atividade por meio de programação, pelo uso e aplicação de pacotes (pandas) e funções que envolvam conceitos de ciência de dados como média, mediana, dispersão, investigação da correlação de variáveis;
+demonstração de habilidade na seleção de pacotes de visualização de dados (matplotlib ou seaborn), uso e parametrização de funções específicas para alcançar boas representações gráficas de variáveis relevantes ao problema, como gráfico de barras, setores, boxplot, dispersão e histogramas.  
+  
+Ao longo do processo, o mediador acompanhou e verificou se o/a estudante conseguiu alcançar os objetivos citados, contudo, foi importante orientá-lo/a nas suas dificuldades para que alcançasse um produto mínimo para apresentação na segunda etapa. Esta foi constituída pela apresentação do/a estudante, que tinha de atender os critérios de seleção e domínio do conteúdo e habilidade.      
+
+
+Inteligência Artificial (G1)
+
+A disciplina de IA foi construída de forma a colocar  os/as estudantes em contexto de protagonismo, através de mediações, para fortalecer o senso crítico e investigativo, a partir da construção de soluções e estudos de caso, conectados com a realidade vivenciada por muitos/as deles/as. Nesse contexto, foram explorados materiais digitais, recursos desplugados, debates e tarefas ligadas ao uso de tecnologia e questões sociais.
+Para entender o conceito da IA e aprendizado de máquina, foi realizada uma dinâmica a partir de um paralelo sobre o aprendizado humano, através da caixa dos sentidos, na qual o repertório sensorial, permitiu, através do tato, identificar os objetos nela contidos, possibilitando o entendimento de que as máquinas aprendem segundo um repertório a ela fornecido para aprendizado, através de recursos digitais como Teachable Machine e Quick Draw, esses conceitos foram trabalhados. 
+
+Além disso, a percepção de como a IA está presente em nosso cotidiano foi trabalhada através da exploração de textos de divulgação científica presentes na web, nos quais diversas questões sensíveis a benefícios, riscos e vieses foram explorados.  As noções de visão computacional foram trabalhadas através do Seeing AI, um projeto que compõem o pacote IA para o bem da Microsoft, que utiliza a tecnologia de Inteligência Artificial para ajudar a comunidade de pessoas com baixa visão a enxergarem melhor o mundo ao redor delas. Discussões sobre processamento de linguagem natural e reconhecimento de voz foram realizadas através da experimentação do editor de texto Word da Microsoft, trazendo aplicações como chatbots inteligentes, tradutores de textos, entre outros. Robôs inteligentes foram abordados através da capacidade de se mover com base no que vê ou ouve, um robô Lego Mindstorm foi utilizado para exemplificar a tomada de decisão com base em um caminho programado ou Inteligência artificial. 
+
+Para discutir como percebemos o ambiente a nossa volta, como a IA está presente em nossa vida e como ela pode ajudar a solucionar problemas da nossa sociedade, tomada as subáreas estudadas, uma série de tecnologias atuais foram levantadas, a partir do noticiários online, e expostas para que os/as estudantes pudessem reconhecer qual tecnologia estava presente, bem como um debate sobre soluções, benefícios e riscos foi realizado. A cada discussão e atividade, uma construção de saberes foi proporcionada de forma experimentada.
+
+Protagonismos (G1 e G2)
+
+O conhecimento de mundo que está na bagagem de cada estudante foi valorizado pela equipe. Com isso, propiciou-se um ambiente de participação e colaboração ativa, fortalecendo a autoestima a partir da valorização dos saberes de cada um. A cada mediação, buscou-se estimular o questionamento, as proposições, a reflexão e a amplificação das discussões para a comunidade e para promoção da justiça social. Assim, as metodologias ativas e o ideário Freireano contribuíram de modo singular para promover o protagonismo juvenil e a criticidade, no qual o/a estudante participa ativamente do seu processo de aprendizagem, construindo o conhecimento com a docente e todo grupo escolar.  Assim, foi possível promover atividades diversificadas que exploravam as potencialidades artísticas – ilustração, poema, paródia, música etc., nuvem de palavras, relatos de experiência, palavras cruzadas. A cada exercício,houve uma possibilidade lúdica de construir conhecimento, propiciando uma desconstrução e uma reconstrução de conceitos arraigados, de vocábulos, de construção de si e compreensão do outro. 
+
+Práticas Investigativas (G1 e G2)
+
+As construções de Práticas Investigativas foram construídas baseadas em conteúdos disciplinares para promover aos/às cientistas a formação referente a iniciação científica e divididas em 4 blocos: (1) Introdução à pesquisa científica; (2) Identificação de problemas da sociedade e resoluções de problemas; (3) Palestras com cientistas;  (4) Práticas do projeto de pesquisa. 
+
+Na etapa 1, a equipe teve como missão introduzir todas as etapas de uma pesquisa científica, isto é, introdução, objetivo, problemas, justificativas, desenvolvimento, referências, relatório de pesquisa e o plano de pesquisa. Foi realizado um encontro para essa discussão, visto que todas as etapas, os(as) estudantes iriam aprender na prática, junto com seus e suas orientadoras(es). 
+
+Na etapa 2, foram discutidos problemas da sociedade que os estudantes gostariam de pesquisar e propor soluções. Para tanto, professores e pesquisadores da Universidade Federal da Bahia e Universidade Federal do Recôncavo Baiano foram convidados a orientar os diversos grupos de estudantes.
+
+Na etapa 3, foram realizadas duas palestras, cujo objetivo foi discutir o papel do cientista na sociedade e quais fatores influenciam na formação pessoal de jovens cientistas. Para isso, foi convidado o diplomata, físico nuclear e cientista, Ernesto Mané Batista, que trouxe desafios, resultados e realizações de cientistas. O segundo palestrante foi o professor Odair Marques da Silva, da Unicamp, com o propósito de discutir sobre o tema “As universidades e as novas tecnologias em África: uma abordagem contemporânea”, tal palestra propiciou uma desconstrução de todas as imagens estereotipadas que se construiu secularmente sobre África. 
+
+Na etapa 4, complementar à etapa 1, discutiu-se procedimentos para realização de uma pesquisa científica e foram propiciados diálogos entre grupos de pesquisa e  orientadores(as) e coorientadores(as). Assim, os(as) estudantes puderam colocar todo o conhecimento adquirido e construído em prática. 
+
+Foram oito meses de grande evolução, com reuniões semanais, elaboração de conteúdos e materiais com intuito de transformar realidades e aprender a partir da ciência. Por fim, os projetos produzidos foram apresentados em três momentos: 1a Mostra de Iniciação Científica (organizado pela equipe do projeto e realizada de forma presencial na Escola Politécnica da Ufba), 12° Encontro de Jovens Cientistas da UFBA (realizado de forma híbrida na Ufba) e  Feira Mineira de Iniciação Científica (realizado no formato virtual).
+
+Resultados Obtidos 
+ 
+Produções
+Página do projeto
+A  página do Programa (https://cienciadedadosep.wixsite.com/cienciadedados) foi desenvolvida para ser uma referência de consulta de materiais desenvolvidos e conteúdo trabalhado com os/as estudantes de forma  organizada. Assim, estudantes, professores  e toda a comunidade possuem um vasto conteúdo sobre Ciência de Dados, Pautas sociais, raciais e de gênero, Inteligência Artificial e Práticas Investigativas.
+
+Figura X: Página principal do Programa Ciência de Dados na Educação Pública
+
+
+(re)Conhecendo Salvador
+
+O site (re)Conhecendo Salvador (http://reconhecendosalvador.ufba.br/), lançado em 2021, foi povoado ao longo de 2022, diversos temas foram trazidos, perguntas foram levantadas e  diversas respostas produzidas baseadas em temáticas importantes sobre a cidade de Salvador e validadas por especialistas. O resultado desse processo gerou  um poderoso  recurso que possibilita a exploração da cidade e de suas dinâmicas através de dados.
+
+       Figura X: Página principal do site (re)Conhecendo Salvador
+
+
+
+O site (re)Conhecendo Salvador possui em torno de 50 repositórios hospedados na plataforma do GitHub. O site é dividido em 11 temas diferentes, relacionados a cidade de Salvador, com um total de 44 subtemas e 160 perguntas, que foram levantadas e respondidas utilizando os dados da cidade. Para que tudo isso fosse possível, em 2022, foi necessário uma equipe de 4 pessoas contribuindo ativamente no povoamento do site.
+
+Para o projeto, a todo momento, essa atividade teve papel transversal, produzindo um eixo de formação para os pesquisadores a nível de iniciação científica, que além do povoamento do site, foram responsáveis pelo papel de mediação nos encontros de ciência de dados. Os passos para o povoamento do site envolveram a escolha, avaliação, registro - etapa de curadoria dos dados. Em seguida, a transformação e adequação dos dados a estruturas como json por meio de bibliotecas do R e conexão com as bibliotecas de visualização de dados - Apache Echarts. Por fim, o site foi povoado pela manipulação do seu Sistema de Gerenciamento de Conteúdo por meio de bibliotecas em Python. Todo esse processo foi documentado por meio de git, em comunicação com o Github. A cada novo tema, a equipe tinha mais elementos para dialogar durante os encontros, gerando interdisciplinaridade almejada pelo projeto. Portanto, é possível afirmar que um dos principais legados desse projeto é uma equipe pronta para novos desafios na área de tecnologia e abertos ao papel extensionista como agentes de transformação social.   
+ 
+
+E-book Protagonismos (Racial)
+-       O material tem por principal intuito o enfrentamento do racismo, partindo do âmbito escolar e da mediação de docentes sobre as relações raciais, as segregações e opressões histórica, social, política e econômica do/a negro/a no Brasil. Nesse contexto, propõe-se ao docente arcabouço teórico para debates sobre Colorismo e Branquitude, Mito da Democracia Racial, Racismo na escola, Intolerância religiosa, dentre outros, a fim de fortalecer a educação para a cidadania e para a justiça social. Para tanto, deve-se utilizar estratégias lúdicas de ensino-aprendizagem - músicas, jogos, estudo de caso, debates, situação-problema, relatos pessoais, filmes, redes sociais etc., possibilitando ao discente a compreensão (e aprofundamento) da conjuntura racial brasileira e estimulando a atuação deles como agentes transformadores em âmbitos micro e macro.
+ 
+E-book ciência de dados
+
+Intitulado Uma Introdução Gentil à Ciência de Dados, este e-book foi resultado da escrita de muitas mãos, pessoas que, a cada ano de projeto, deixaram suas visões sobre as relações da ciência de dados, sobre os dados de Salvador ou da Bahia e sua contribuição para a formação de estudante e mediador.  Assim, os avanços realizados ocorreram em paralelo ao processo de curadoria de dados do site (re)Conhecendo Salvador e enriquecido pelos debates ao longo das reuniões do projeto e elaboração dos encontros das aulas de ciência de dados  dos grupos G1 e G2. Atualmente, o ebook está numa fase de finalização. Destaca-se aqui o papel fundamental exercido por esse material como referência para realização dos encontros do curso de ciência de dados para os dois grupos. 
+Além disso,  em paralelo, foi iniciado um processo de diagramação da versão em formato pdf do livro para os capítulos finalizados. O material contempla os seguintes temas de ciência de dados: ciclo de dados e privacidade de dados; dados e banco de dados; visualização de dados; correlação e causalidade; medidas de tendência central e dispersão; pesquisa amostral, coleta de dados; espaço amostral, amostra, distribuição de probabilidade e possibilidade;pergunta estatística e formulação de hipóteses; classificação; modelos de regressão, critérios de ajuste de modelos. Tais capítulos são concentrados em temas específicos como: Programas de transferência de renda, CadÚnico, Programa Bolsa Família, dados de educação, como Exame Nacional do Ensino Médio (ENEM), dados esportivos, dados sobre indicadores de segurança pública e suas estruturas administrativas; câncer de mama; dados eleitorais; pandemia do coronavírus (covid-19) e resíduos sólidos urbanos (RSS). As diferentes  situações-problema foram permeadas pela abordagem de ciência de dados. A disponibilidade de dados desagregados por raça e gênero, ainda que limitados, foram disparadores de questões fundamentais debatidas na linha do projeto ligada a protagonismos. Portanto, trata-se de um possível guia para que jovens cientistas possam trilharem seus estudos em ciência de dados, sem as barreiras técnicas simbolizadas pela área. Adicionalmente, tem sido produzido um conjunto de materiais de orientação ao professor para a realização de mediações em ciências de dados, sendo a maioria desses documentos das aulas práticas experimentados pelos grupos G1 e G2.  
+ 
+Ciência de Dados (G1)
+Ao longo deste segundo semestre foram desenvolvidas competências e habilidades que são entendidas no ciclo de dados como Pesquisa Amostral, Probabilidade, Testes de Hipóteses e Regressão Linear. É importante salientar que, sem o processo de aproximação dos Fundamentos dos Ciclo de Dados, Sistemas de Recomendação, Organização de Bancos de Dados, Visualização de Dados e Correlação, não seriam observáveis os avanços identificados ao final deste semestre. Tais elementos foram avaliados ao longo do processo de formação de estudantes, por meio de estratégias dialógicas e pela constante experimentação em dinâmicas suportadas em temas apresentados.
+Em resumo, observamos que mais de 80% dos jovens cientistas atingiram os conceitos “Ótimo” ou “Muito Bom”. A maioria dos estudantes que apresentaram um desempenho “Ótimo” e “Muito Bom” são aqueles que, durante o ano de 2022, participaram ativamente dos encontros e demonstraram mais entusiasmo durante as dinâmicas, características que revelam o engajamento na proposta do projeto. Os demais estudantes atingiram resultados menos expressivos. Apesar de presentes fisicamente, não havia um envolvimento pleno, costumavam se dispersar. Algumas hipóteses podem ser investigadas acerca disto, contudo não dispomos de dados suficientes para conclusão.
+Através da análise do gráfico da Figura 02, observa-se que aproximadamente 50% dos estudantes alcançaram conceito “Ótimo”, o que indica a efetividade das ações do projeto em introduzir os jovens cientistas de ensino fundamental (anos finais) e médio nas competências e habilidades associadas às ciências de dados.  Três estudantes que são avaliados como “Regulares” (na cor azul claro) aparecem desconectados no gráfico e são estatisticamente avaliados como outliers. Portanto, há evidências que apontam para a eficácia das ações do projeto ligadas, uma vez que a maioria de cursistas obtiveram êxito nas aprendizagens.   
+
+
+Figura 02 - Gráfico boxplot das atividades de reorientação do grupo G1 e os respectivos conceitos. 
+
+ 
+ 
+Ciência de Dados G2
+Para a avaliação das competências e habilidades, foi proposta uma atividade que pretendia explorar as vivências em programação por meio do desenvolvimento de um projeto. Essa atividade, desenvolvida em 4 encontros, foi realizada pela introdução do jovem cientista ao espaço de dados e desafios de ciência de dados, Kaggle, e culminou com um encontro dedicado às apresentações individuais e debate dos resultados. O enunciado principal da atividade foi fornecido como descrito abaixo:  
+
+O TikTok é um aplicativo de grande popularidade entre o público mais jovem. Devido à proximidade dos estudantes da turma de programação com esta realidade, o projeto proposto pede que as/os jovens cientistas do grupo G2 fizessem análise estatística e exploratória dos dados relacionados às músicas populares no aplicativo com base nos conteúdos ministrados ao longo do ano. Sendo acompanhado de perguntas orientadoras, explorando a criatividade para encontrar padrões de popularidade entre as músicas, analisando relações entre as variáveis presentes no banco de dados proposto.
+
+O objetivo d a atividade foi identificar, selecionar, processar e analisar dados, fatos e evidências com curiosidade, atenção, criticidade e ética, inclusive, utilizando o apoio de tecnologias digitais. Nos quais os estudantes avaliaram a aplicação de conceitos de ciência de dados, como:
+Avaliação de relevância das variáveis de estudo da situação problema;
+Consulta e manipulação de dados; 
+Medidas de frequência e análise de histogramas; 
+Análise e decisão a partir de dados tabelados; 
+Construção e interpretação gráfica; 
+Avaliação de correlação e identificação de hipóteses para comportamento aleatório das variáveis analisadas;
+E aplicação de conceitos de programação que se expressam em habilidades específicas como:
+Organização lógica;
+Uso de linguagem de programação (Python e bibliotecas);
+Manipulação de dados e construção de tabelas (pandas);
+Construção digital de gráficos (matplotlib e seaborn); 
+
+A partir da avaliação do desenvolvimento, constatou-se que 75% dos estudantes obtiveram conceito final “Ótimo” ou “Muito Bom”. O desempenho deles/as está fortemente relacionado às suas vivências e aprendizados anteriores ao início das aulas de programação, principalmente, aqueles que obtiveram resultado “Ótimo”. Ao todo, 5 estudantes apresentaram desempenho “Ótimo”, como visto na Figura 03, dos quais dois são estudantes do curso técnico de Eletrotécnica no Instituto Federal da Bahia (IFBA) e outros dois tiveram contato com a programação anteriormente, um em C++ e outro é participante do programa Jovem Aprendiz, desenvolvendo códigos em R e Python.
+
+Quanto aos jovens cientistas que obtiveram conceitos “Bom” e “Regular”, um de cada, o desempenho está relacionado à construção do projeto final e à participação nas aulas, respectivamente. O estudante que resultou no conceito “Bom” demonstrou conhecer o acervo de comandos utilizados em aula, porém apresentou dificuldade para entender as variáveis existentes do banco de dados utilizado, como exemplo, tentou utilizar apenas variáveis categóricas para construir um gráfico de barras. Além disso, esteve presente em apenas 61% dos encontros, valor abaixo dos outros estudantes do grupo G2. O estudante que resultou no conceito “Regular” demonstrou dificuldades com a computação ao longo do ano. Entretanto, não apresentou comprometimento com a turma e o desenvolvimento do trabalho final. Estava presente nas aulas de desenvolvimento, porém demorava para iniciar a construção do trabalho e saia mais cedo de alguns encontros. Fez pouco uso do acervo de comandos utilizados em aula no projeto e apresentou apenas um gráfico ao todo, com erros de programação. O estudante que resultou no conceito "Insatisfatório" não desenvolveu o projeto final. Portanto, assim como os resultados obtidos para o grupo G1, não há evidências que apontem para a ineficácia das ações do projeto ligadas à ciência de dados e programação.
+
+Figura 03 - Gráfico boxplot das atividades da avaliação processual do grupo G2 e os respectivos conceitos. 
+
+   
+ 
+ 
+ 
+ 
+Inteligência Artificial
+A IA, por tratar-se de um tema amplamente abordado na atualidade, já se fazia familiar, pelo menos o nome, aos/as estudantes. Apesar disso, constatou-se que é um conceito associado a robôs/humanoides ou as tecnologias digitais de uma forma geral, não sendo tão simples quanto parece a distinção do que é ou não um sistema inteligente. A partir do conteúdo explorado, dos exemplos, experiências e aplicações trabalhadas nas mediações foi possível estimular a percepção mais ampla dos/das estudantes sobre as subáreas e aplicações da IA em nosso cotidiano. 
+Nas mediações foi possível perceber a ampliação do vocabulário na área e a capacidade de exemplificar ou propor soluções inteligentes para o ambiente que os/as cerca.  Ao final da formação, conceitos foram elaborados com forma de estimar uma medida de avanço dos/das estudantes, uma escala de conceitos – regular, bom, muito bom e ótimo, e 80% dos/das estudantes alcançaram resultados a partir de bom, atingindo minimamente os objetivos propostos. Aqueles que se apresentaram de forma regular, foram os que demonstraram baixo engajamento com as atividades propostas e/ou fragilidades com conceitos envolvendo tecnologias e Inteligência Artificial. 
+De um modo geral, os/as estudantes demonstraram interesse e curiosidade sobre a área, fato esse aliado a presença cada vez maior na sociedade, a IA se apresenta como um campo promissor para a difusão científica nas escolas e sociedade. 
+Protagonismo
+A partir da seleção e da mediação de conteúdos socialmente relevantes, a equipe de Protagonismos conseguiu aguçar a criatividade e a criticidade do grupo de estudantes, instrumentalizando-os/as ao debate e, sobretudo, à ação. Isso reflete a maneira como os/as estudantes traziam dúvidas, relatos, notícias que se conectam ao processo de aprendizagem. Com isso, ao fim do ciclo de formação, em uma escala de conceitos – regular, bom, muito bom e ótimo, todos/as estudantes conseguiram alcançar resultados a partir de bom, o que nos sinaliza para o fato de que os/as alunos/as conseguiram atingir minimamente os objetivos propostos pela equipe. Nesse sentido, a mobilização dos conteúdos propiciou a reverberação na família, entre amigos e na escola, segundo os/as estudantes, o que sinaliza para o cumprimento do intento do Projeto que visa promover um ambiente que instiga a justiça social. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Práticas Investigativas
+Sem dúvidas, o processo de desenvolvimento dos projetos científicos promoveu o crescimento individual  e acadêmico das/os estudantes, cuja motivação inicialmente se deu pela possibilidade do trabalho com temas de seus interesses (ver quadro x), sob a orientação de professores e pesquisadores, e com o apoio dos integrantes da equipe de Práticas Investigativas. Assim, com tanto afinco na elaboração dos projetos, três foram premiados no 12o Encontro de Jovens Cientistas, em duas modalidades: podcast e vídeo (P1, P6 e P10). 
+Quadro X: Temas dos projetos científicos produzidos pelas/os estudantes
+P1 - Deslocamentos para acessar o centro de atendimento educacional especializado pestalozzi da bahia: estudo de caso do padrão de viagem dos alunos com necessidades especiais
+
+
+
+P2 - Mapeamento dos estabelecimentos comerciais existentes no bairro da escola para verificar se os acessos são facilitados: estudo de caso da mobilidade urbana
+
+
+P3 - Indicador ambiental do uso de recursos materiais nas escolas públicas da cidade de Salvador - Bahia
+
+
+P4 - Produção de experimentos científicos voltados à acessibilidade
+
+
+P5 - Mapeamento de pontos de disposição irregular de resíduos em Salvador, Ba
+
+
+P6 - Como tornar a água potável
+
+P7 - Rios de Salvador (Ciência de Dados e IA)
+
+
+P8 - Exposição de crianças e adolescentes ao aliciamento sexual infantil na internet
+
+
+P9- Mapeamento do atual interesse pela leitura entre jovens estudantes de salvador-ba através de ferramentas da ciência de dado
+
+
+
+P10 - Dançando correlações
+
+
+P11- Monitoramento de desemprego em STEM na bahia
+
+
+P12 - As fake news sobre as vacinas da covid-19 e o seu impacto na sociedade
+
+
+
+P13- O impacto da pandemia no ensino das escolas públicas de salvador
+
+
+P14 - Um passeio pela inteligência artificial nas feiras de ciências. (clube de ciência)
+
+P15 - Acessibilidade no Ambiente Escolar
+
+
+
+
+Segundo Paulo Freire,  “Não há saber mais ou saber menos: há saberes diferentes”. Durante as elaborações e execuções dos projetos de ciências, estudantes trouxeram frases como: “eu não consigo”, “não tenho tempo para isso”, “como eu vou fazer um projeto de ciência se eu não sei o que estou fazendo?”, “eu sou um cientista”, “eu consigo e posso realizar este projeto”, e diversas outras fases que contribuíram para refletirmos o quanto são diversos e que existe o desejo de querer sempre acertar e o medo de comparações de um projeto com outro. Ao final de 2022, a frase que mais foi dita foi “Não existe resposta certa, este é o momento de errar para aprender”. 
+Explorando esse momentos de aprendizado, foi promovida uma Mostra de Ciências na UFBA, com convidados vindos de grupos de pesquisa da Universidade, somados aos visitantes, como pais, mães, responsáveis, amigos e outros grupos escolares, os/as estudantes puderam apresentar formalmente seus projetos de ciências. Foi uma experiência rica de troca, na qual, convidados puderam realizar perguntas, gerando debates sobre os temas apresentados  e construção de conhecimento, pois os estudantes puderam maturar suas ideias frente aos debates, além de o público vivenciar o contexto de produção  ciência que os/as estudantes experienciaram ao longo do ano. 
+Ademais, houve um incentivo à difusão científica entre as escolas parceiras, por isso duas instituições promoveram Mostras Científicas: Colégio Estadual Ypiranga e Escola Municipal Cidade de Jequié. A equipe participou dessas mostras realizando uma dinâmica que promoveu a reflexão do “Ser Cientista”. A dinâmica foi realizada em 3 partes: (1) Escolhas de cientistas de diferentes áreas, cor, país e etnia, através de fotografias; (2) Auto-percepção sobre ser um cientista (Caixa com espelho e a frase “Eu posso ser um/a cientista”), e (3) Espaço para a/os estudantes escreverem o que fariam se fossem um/a cientista. 
+Incluir respostas dos estudantes referente à pergunta: O que fariam se fossem cientistas? para ser diagramado pelo Lina. No texto, compare as respostas com as respostas que tivemos nos nossos estudantes. 
+ 
+Desafios e Oportunidades
+ 
+INCLUIR LISTA DE DESAFIOS E OPORTUNIDADES (VER RELATÓRIOS ANTERIORES)
+ 
+Desafios e oportunidades dos estudantes: 
+Embora as experiências de não utilizar recursos computacionais seja muito interessante, como a experiência realizada pelo grupo G1, foi observado que a dificuldade de acesso aos computadores ainda é uma limitação material entre estudantes da educação pública. Assim, ações direcionadas à promoção do uso desse recursos em modelos de empréstimo ou abertura de espaços planejados para o uso, potencializariam as habilidades e competências de estudantes já engajados nos cursos de ciência de dados. 
+No campo material, é observado como fator limitante a participação do/a estudante de forma engajada sem o acesso a transporte gratuito. Em todas as realizações do projeto, sempre houve a cooperação com uma bolsa que previa deslocamento (durante a pandemia considerava-se o direcionamento desse recursos para internet);
+O trabalho com questões sociais, raciais e de gênero, embora esteja em um campo do cotidiano, no qual os meios de comunicação exercem forte papel, também perpassa por paradigmas já cristalizados e mediados por esferas como: família, igreja, escola, grupo de amigos/as etc. Nesse contexto, os desafios perpassam por superar as estruturas sociais e o senso comum que, no Brasil, impõem padrões segregadores de manutenção de poder, a partir da opressão aos grupos marginalizados. Assim, para superar as injustiças sociais, há de se refletir e agir contra séculos de racismo estrutural, de patriarcado, de dizimação de povos indígena, de homofobia e outras tantas segregações. 
+ 
+Desafios e oportunidades dos professores:
+ 
+O conhecimento da ciência de dados para o professor pode parecer um objetivo inalcançável, assim aproximá-lo é um desafio que deve ser vencido por etapas, como feito com estudantes, que foram introduzidos/as nesse universo de maneira gradual, passando inicialmente pela formação sem o uso de computadores, como ferramenta dessa disciplina no grupo G1, e seguindo para a experiência em programação de ciência de dados e acesso ao universo de cultura digital ao qual ela pertence; 
+-Existe a necessidade de desmistificação da linguagem de programação ou do programador como figura com inteligência diferenciada e, por vezes, inacessível. As principais reuniões e congressos internacionais de grandes empresas do setor revelam essa característica, adicionalmente a indústria de cinema frequentemente apresenta sujeitos dedicados a estas atividades com características muito específicas. Na contramão, diversos capítulos de movimentos, como RLadies, PyLadies, Django Girls e diversos núcleos de extensão das universidades públicas têm promovido ações para aprofundar a visão crítica e aceitação de pessoas diversas como sujeitos pertencentes a este sistema, ampliando a diversidade de gênero e raça. O acompanhamento desses debates ainda passa por uma conexão mais íntima com a universidade ou movimentos sociais livres. Portanto, para a escola e  professor/a, estes processos são um resultado da conexão inicial dos objetivos dos projetos de pesquisa e extensão da universidade que perpassam pelas comunidades escolares. O alinhamento desses temas com os grandes eixos temáticos das escolas é um caminho a ser percorrido. Nesse sentido, compreendemos que o projeto Ciência de Dados cria uma possível interface de oportunidades para ampliar as ações com esta orientação;
+A escola, como esfera social de escolarização e formação de sujeitos críticos e reflexivos, tem como a principal fonte de mediação e de proposição para resolução de conflitos os/as docentes. Entretanto, ao passo que ocupam esse local, muitos ainda reproduzem estigmas sociais. A proposição para refletir sobre questões ligadas à cisgeneridade, à transgeneridade, à orientação sexual, ao respeito da comunidade LGBTQIA+, ao engajamento na luta contra a transfobia, a homofobia, o sexismo, o racismo, a compreensão de fatores sócio-históricos-culturais que lastreiam todas essas relações, possibilita ao docente uma práxis voltada para justiça social, que é o intento desse Projeto. 
+ 
+Desafios e oportunidades do Projeto Ciência de Dados na Educação Pública:
+ 
+O projeto Ciência de Dados na Educação Pública, ao longo desses últimos 4 anos, promoveu ações e gerou resultados a partir do grupo de pesquisa GAMMA, da Escola Politécnica/UFBA, que é liderado por uma mulher.  O escalonamento do projeto,  dos principais produtos alcançados até esta etapa passam por adaptações que o transformaram em um programa. Para tanto, existe a necessidade de que a instituição que assuma esse papel seja de fato um ator da educação e que promova a sustentabilidade financeira. Tais ideias coadunam com as trilhas do novo ensino médio;
+Algumas oportunidades têm surgido como resultado de ações da prefeitura de Salvador pelo Salvador Tech. Assim, é preciso compreender como o projeto de Ciência de Dados na Educação Pública pode dialogar com essas ações direcionadas ao setor de tecnologia, a fim de alcançar resultados significativos para a rede municipal de ensino; 
+Explorar as novas estruturas de colégios estaduais recém inaugurados, como centro de referência e formação para estudantes e professores, em linhas propostas pelo projeto, também são oportunidades que devem ser construídas com os diversos atores que cooperaram ao longo desse quadriênio; 
+Permanecer formando pós-graduandos com visão de difusão científica. Profissionais com alta capacidade de execução e mobilização de recurso para esta atividade fim;
+Promover e ampliar debates na universidade sobre o reconhecimento de projetos extensionistas que envolvem pesquisa, educação e ciência;     
+Atuar na formação de agentes de transformação social para agir localmente e globalmente, através das percepções sociais e de cidade;
+Promover a difusão do conhecimento científico e engajar para as lutas sociais, a fim de superar as injustiças promovidas nos âmbitos sociais, raciais e de gênero.
+ 
+Percepções e Prospecções
+ 
+O ano de 2022 se constitui como o quarto ano de uma iniciativa que foi se transformando e se reinventando sem perder de vista o foco da difusão científica e da transformação da vida de muitos estudantes através dela. Nesse sentido, tivemos que eliminar barreiras e usar as nossas experiências e desejos por mudanças como fonte de inspiração. Tivemos que ser mais ousadas/os, flexíveis, criativa/os, trabalhar com razão e sensibilidade e, fundamentalmente, ampliar o foco do objetivo para valorizar, também, o processo.
+ 
+Apesar do contexto da ciência de dados envolver as dimensões do digital e a realização das atividades dos anos anteriores terem ocorrido online, as mudanças nascidas do retorno às atividades presenciais são significativas. Durante as dinâmicas dos grupos G1 e G2, a estratégia de manipulação de materiais para alcançar a visualização de dados possibilitou um processo construtivo da informação, visualização e tomadas de decisões.Portanto, passou-se a explorar sentidos que são limitados nas atividades online. Por exemplo, as/os jovens cientistas do grupo G2 foram desafiados/as com o projeto Querido Dado, atividade criativa, contextualizada com as vivências urbanas dos estudantes. Essa retomada dos saberes, oportunizou a cada jovem cientistas uma visão crítica e analítica do seu dia a dia. 
+ 
+Os exemplos aqui apresentados demonstram as portas abertas da interdisciplinaridade provocadas por uma ciência que se dedica ao dado.  Outros saltos, por vezes, são necessários, a visita realizada pelos jovens cientistas ao Museu  da Música da Bahia revelou segredos sobre os seus bairros que ficam escondidos no dia a dia. Numa experiência audiovisual do museu  foi possível descobrir que o Terreiro do Gantois (Ilé Íyá Omi Áse Ìyámase) localiza-se na Federação, bairro no qual muitos jovens cientistas vivem. Portanto, fecharam o ciclo nesta experiência com o projeto Ciência de Dados na Educação Pública com fortalecimento das suas raízes, com sua história e valor do seu povo. 
+ 
+O desenvolvimento do pensamento científico de um/a jovem cientista de dados foi promovido através da definição e delimitação de um problema de pesquisa e da formulação da hipótese, por meio de discussões lideradas pelas quatro equipes. A coleta de dados e a análise e interpretação dos resultados possibilitou a rejeição ou não da hipótese inicialmente definida, e a consequente proposição de novas formas de pensar e agir. E como as pesquisas científicas mostram sua beleza quando diferem entre si, não se pôde falar em um roteiro rígido para elaboração de projetos de pesquisa ou se pôde definir ferramentas estatísticas específicas para nortear o levantamento ou o tratamento dos dados. Assim, as experiências individuais, a criatividade e as trocas foram essenciais nas discussões e na construção dos projetos de ciências. Ademais, a criatividade também aflorou quando um único problema se deu de forma livre (estudo de caso dos dados do tiktok). Novos vocábulos foram construídos.
+ 
+ 
+ 
+Ciência de dados 
+ 
+Conceitos e vocabulários G1
+ciclo de dados, sistemas de recomendações, big techs , histograma, privacidade de dados, big data, amostra, probablidade, possibilidade, espaço amostral, hipóteses, influencers, produtores de conteúdo, classificação, materialidade do digital, computação em nuvem,  modelos matemático, critérios de ajuste de modelos, mínimos quadrados, resíduos sólidos, áreas integradas de segurança pública, rede hoteleira, taxa de ocupação de leitos. 
+ 
+Conceitos e vocabulários G2
+ 
+ciclo  de dados, gráfico de barras, linhas, setores, dispersão, histogramas e boxplots, matriz de correlação, mapa de calor, legenda, eixos, Python, Google Colab, Kaggle, observação, medição, representação, querido dado, markdown, computação em nuvem, banco de dados, variáveis discretas, contínuas, categóricas, numéricas e datas, inteiro, float, valor faltante, biblioteca, método, função, estrutura de dados, dataframe, size, columns, rows, filter, loc, sum, color, palette, pandas, matplotlib e seaborn. Interpretação, insight, análise, decisão, agrupamento, filtro, ordenação. Gráficos de setores, barras, histogramas.   Frequência, correlação, média, mediana, amplitude, dispersão, distribuição, desvio padrão, quartis e posição.  
+ 
+Inteligência artificial - G1
+ 
+Inteligência, treino, viés algorítmico, dados de treinamento,  aprendizado de máquina, visão computacional, processamento de linguagem natural, reconhecimento de voz e robôs inteligentes.
+ 
+	Protagonismos racial, social e de gênero -  G1 e G2
+Cisgeneridade, transgeneridade, não-binário, LGBTQIAP+,, trnsfobia, homofobia, transfobia, heterossexualidade, homossexualidade, bissexualidade, racismo estrutural, mito da democracia racial, preto/pardo e negro, necropolítica, maternidade compulsória, machismo, masculinidade tóxica, feminicídio, estupro/estupro de vulneráveis, capacitismo, pessoa com deficiência. 
+ 
+O alcance de tantos resultados frutíferos e transformadores foi possível graças ao elo criado entre os/as responsáveis pelos estudantes e a equipe do projeto. O diálogo e respeito conquistados viabilizou o engajamento dos/das estudantes principalmente no que diz respeito às atividades dos projetos de ciências desenvolvidos. O fluxo de trabalho, a movimentação e frequência dos estudantes da UFBA além dos sábados reservados só foi possível graças à confiança estabelecida nessas relações.
+ 
+Todo esse contexto de construção e resultados descritos ao longo desse documento possibilitou à equipe do projeto um amplo espaço de reflexão e gratidão pelas experiências adquiridas. O processo de proposições de temas a serem trabalhados, desenvolvimento de materiais, as trocas ao longo de todo o ano em cada mediação proposta, cada reunião que proporcionou debates e buscas de estratégias metodológicas para criar esse ambiente acolhedor e transformador para os/as estudantes proporcionou uma verdadeira transformação e crescimento em cada um de nós.
+ 
+Esperamos que todo o material, produzido através das trocas e aprendizados, durante esses quatro anos, possa se constituir em ferramentas de apoio ao delineamento de políticas públicas para a inclusão de ciência de dados no currículo escolar das escolas públicas.
+ 
+Considerações Finais
+ 
+Pelo quarto ano consecutivo, compartilhamos todo o trabalho planejado e desenvolvido durante um ano na forma de um documento escrito. É bem possível que essas páginas ainda não consigam dimensionar as ações promovidas pela equipe, tendo em vista de que, por vezes, o desenvolvimento humano não pode ser mensurado. O que dizer de uma estudante que defende com argumentos raciais a colega que está sofrendo bullying por conta do cabelo crespo ou do estudante que, ao vestir uma camisa rosa, foi ridicularizado por colegas, mas estava firme no convencimento de que as cores não definem orientação sexual? O que dizer da estudante que propõe uma solução para um problema de programação no estágio (Programa Jovem Aprendiz) e que deixa o chefe surpreso com a percepção e proposição? O que dizer de estudantes que começam a ter um olhar diferenciado para a cidade e passam a buscar dados para compreender os fenômenos? Bem, são muitas histórias que nos enchem os olhos, o coração e nos traz a certeza de que estamos trilhando caminhos que possibilitam resultados. E o melhor: nossos/as estudantes estão extrapolando nossas salas de aula e levando o conhecimento científico para a comunidade. 
+Por isso, aqui, neste relatório, trazemos apenas objetivos e metodologia que foram redefinidos e ampliados durante o processo, de forma a considerar novas experiências e expectativas. Descrevemos, de forma justificada, atividades e ações realizadas, desafios e meios para superá-los e novas oportunidades. Entretanto, consideramos como o maior desafio, o relato dos resultados alcançados. O que podemos chamar de “resultado” quando desejamos promover e participar de processos de transformação? 
+Observamos no olhar e na fala das/os estudantes, sua excitação ao estarem na Universidade, ao se perceberem parte de um mundo antes inexistente ou distante.  A ansiedade em refletir sobre as diversas faces e dinâmicas que envolvem a cidade e a sociedade. A decepção inicial quanto ao erro, seguida pela alegria da percepção de que, para a equipe, todo erro é pedagógico. A valorização do processo de aprendizagem, explorando caminhos, sem focar exatamente no resultado final, mas, sobretudo, nos processos constitutivos. A felicidade em conhecer, experimentar, desenvolver e compreender algo novo. 
+A avaliação qualitativa ou quantitativa dos resultados das iniciativas desenvolvidas pelo Programa Ciência de Dados na Educação Pública é objeto de pesquisa de uma tese de doutorado. Portanto, aqui, tais resultados são apresentados de forma preliminar e não são justos o bastante em relatar de forma fiel os chamados “resultados”. Até então, compreendemos que impactamos mais do que conseguimos mensurar. 
+Por fim, criamos oportunidades de experimentar o universo das/os estudantes por quatro anos consecutivos e algumas portas foram abertas. Mas consideramos que novos caminhos precisam ser traçados. Caminhos que podem ser oportunizados para todo o universo de estudantes das escolas públicas. 
+Acreditamos que mais iniciativas educacionais precisam ser criadas para a inclusão da Ciência de Dados na base curricular das escolas. Não somente conectando às diversas disciplinas, mas também como uma nova disciplina, gerando, de fato, uma política pública educacional.
+ 
+ 
+ 
+"Conhecer e experimentar para compreender e transformar"
+ 
+ 
+ 
+Equipe
+ 
+Coordenação Geral: Karla Esquerre
+Coordenação Pedagógica: Daniele dos Santos Lima
+Administrativo: Reijane Gomes da Silva
+Equipe Ciência de Dados: Robson Wilson Silva Pessoa, Bruna Victoria Climaco Reis dos Santos, Laio Luis Barbosa Ribeiro, William Cardoso Sacramento, Sandra Pinheiro, Karla Esquerre.
+Equipe Inteligência Artificial: Cedma Ranielly Santos Firmino, Assuero Vallinas Lopo, Larissa Barbosa Livramento
+Equipe Práticas Investigativas: Carolaine Costa da Silva, Alicia Wyse Santos, Karla Esquerre
+Equipe Protagonismos social, racial e de gênero: Daniele dos Santos Lima e Inaiara Oliveira
+Equipe de audiovisual e diagramação: Ilane Abreu, Dandara Melo, Wanderson Barbosa, Roseline Oliveira
+Professores e pesquisadores colaboradores: Silvia Miranda, Tiago Franco Paes, Roseline Oliveira, Leonardo Silva, José Oduque Jesus, Elicelma Carvalho, Yago Veloso, Adriano Pereira da Silva.
+ 
+Apoio e Parcerias
+ 
+Agradecemos o apoio financeiro da Fundação Itaú para Educação e Cultura e a parceria/trocas com as escolas, instituições, grupos, voluntários, amigos e família.
+ 
+§ Escolas parceiras: Escola Municipal Cidade de Jequié (EMCJ), Colégio Estadual Evaristo da Veiga (CEEV), Colégio Estadual da Bahia (Central), Colégio Estadual Henriqueta Martins Catharino (CEHMC), Colégio Estadual Mário Costa Neto (CEMCN) e Colégio Estadual Ypiranga (CEY).
+§ Escolas participantes: Escola Municipal Cidade de Jequié (EMCJ), Colégio Estadual Evaristo da Veiga (CEEV), Colégio Estadual da Bahia (Central), Colégio Estadual Henriqueta Martins Catharino (CEHMC), Colégio Estadual Mário Costa Neto (CEMCN) e Colégio Estadual Ypiranga (CEY), Colegio Estadual Senhor Do Bonfim (C.E. Sr. Do Bomfim), Colégio Estadual Manoel Devoto (C.E. Dep. Manoel Devoto), Colégio Estadual Antônio Carlos Magalhães (C.E.A.C.M.), Colégio Estadual Deputado Manuel Novaes (C.E. Dep. Manoel Novaes),  Instituto Federal da Bahia (IFBA), Colegio Estadual Mario Augusto Teixeira De Freitas  (C.E.Mª Teixeira de Freitas)
+§ Centro de Estudos de Transporte e Meio Ambiente da UFBA – CETRAMA: atividades formativas e orientação de projetos de ciências
+§ Fundação de Apoio à Pesquisa – FAPEX: execução financeira do Projeto
+§ Gamma–UFBA: Laboratório de Pesquisa, concepção e desenvolvimento do Projeto
+§ Instituto Anísio Teixeira – IAT: capacitação de professores do estado da Bahia
+§ Laboratório de Interpretação de Núcleos Habitados – LINA: identidade visual e apoio à reflexão dos usos dos espaços urbanos
+§ Lemann Center for Educational Entrepreneurship and Innovation in Brazil / Stanford University: ações em definição
+Pós-Graduação em Engenharia Industrial – PEI: suporte à pesquisa
+§ Roda com Ciência - Espaço de ciência interativa do Instituto de Física UFBA: orientação de projetos de ciências
+§ Superintendência de Estudos Sociais e Econômicos da Bahia – SEI: apoio ao Programa Jovem Aprendiz
+§ Universidade Federal da Bahia - UFBA: instituição realizadora do Projeto.
+ 
+ 
+Jovens Cientistas
+ 
+Agnes Cibele Lacerda Cordeiro (CEY)
+Aldri de Matos Barroso (CEHMC)
+Amanda Jesus Borges dos Santo (C.E. Sr. Do Bomfim)
+Anthony Santos de Jesus (CEHMC)
+Ana Carolina Barroso Reis (CEHMC)
+Ana Paula Santos Pinheiro (CEEV)
+Ana Vitória de Jesus Silva (C.E. Dep. Manoel Devoto)
+Anciele Gonçalves dos Santos (CEHMC)
+Andrey Enzo de Jesus Silva Sinto (CEEV)
+Belle Marianne Nascimento Ludugera (CEEV)
+Bruna do Carmo Oliveira (EMCJ)
+Caíque Brito do Rozário (C.E.A.C.M.)
+Cauã Moutinho Menezes (C.E. Dep. Manoel Novaes)
+Cauan Henrique de Jesus Santos (CEY)
+Davi Mota Cardoso da Cruz CEEV)
+Dimitri Silva Moreira (EMCJ)
+Ellen Bianca Nobre Santiago (CEEV)
+Emilly Gabrielly Silva Souza (EMCJ)
+Emily Santos de Jesus (CEHMC)
+Esther Santana Alves Silva (CEV)
+Fernanda dos Santos Souza Bomfim (CENTRAL)
+Gabrielle Santos Pinheiro (CEEV)
+Gabrielle Tereza Santos (CEY)
+Geisislane Ventura dos Santos (CEHMC)
+Guilherme Augusto Santana dos Santos (IFBA)
+Henrique de Jesus dos Santos (C.E.Mª A. Teixeira de Freitas)
+Ian Santos do Sarmo (CEMCN)
+Isabel Cristina Pinho dos Santos (CEHMC)
+Isabele Xavier da Silva Bastos (CEY)
+Janaina Batista Santos (C.E. Dep. Manoel Devoto)
+Júlia dos Santos Barros (CEHMC)
+Julia Samara Mendes Ribeiro (CENTRAL)
+Juliana de Morais Nascimento (CENTRAL)
+Juliana Fernandes dos Santos (CENTRAL)
+Karin Beatriz Silva de Souza (CENTRAL)
+Laila kimberli de Oliveira Santana (IFBA)
+Leidiane Oliveira do Espirito Santo  (EMCJ)
+Lisna Anne Brito dos Santos (CEHMC)
+Lívia Marcely Aquino da Silva (CEMCN)
+Luís Gustavo Simões da Costa (CEHMC)
+Maria Clara dos Santos Gonçalves (CENTRAL)
+Maria Clara Silva dos Santos (CEHMC)
+Maria Thaina Mota da Silva (CEY)
+Matheus Oliveira da Silva (CEMCN)
+Paulo Victor Jesus da Conceição (EMCJ)
+Rafaella Victoria dos Santos Santana (CEMCN)
+Rana Rodrigues Pires de Jesus (CEY)
+Ranald Hermes Brazil Ferreira Macedo de Queiros (CEHMC)
+Samara Queiros Muniz de Jesus (CEMCN)
+Sâmia Rebeca dos Anjos Santos (CENTRAL)
+Sophia dos Santos Barros (CEHMC)
+Thiago Neves Fagundes Brito (C.E. Dep. Manoel Devoto)
+Victoria Nascimento dos Santos (C.E.Mª Teixeira de Freitas)
+Yasmin Santana da Silva Souza (CENTRAL)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Apêndice
+Apêndice A01 - Quadros de encontros e correspondentes habilidades específicas
+
+Quadro 1 - Lista de atividades realizadas com o grupo G1, temas e correspondentes habilidades específicas da BNCC.  
+DATA
+CONTEÚDO MINISTRADO
+Temas
+Habilidades BNCC
+09-abr.
+Utilização do app Ágora
+Diversos Temas - Especialmente RSS
+(EMIFCG01, EMIFCG02 e EMIFCG07)
+30-abr.
+Algoritmo de Recomendação
+Cultura (filmes)
+(EMIFCG01 e EMIFMAT02)
+14-mai.
+Organização de dados
+Feirantes da Baía 
+(EMIFCG07 e EMIFMAT05)
+21-mai.
+Visualização de Dados I
+ENEM 
+(EMIFMAT01 e EMIFMAT05)
+28-mai.
+Visualização de Dados II
+Frota e Acidentes
+(EMIFMAT01 e EMIFMAT05)
+04-jun.
+Correlação
+Hotelaria e Atletas femininas de Vôlei
+(EMIFCNT01 e EMIFMAT02)
+11-jun.
+Medidas de tendência central
+Segurança Pública
+(EMIFMAT01 e EMIFCG07)
+09-jul.
+Reorientação I
+Diversos Temas
+(EMIFCG02, EMIFCG07 e EMIFMAT01)
+16-jul.
+Reorientação II
+Diversos Temas
+(EMIFCG02, EMIFCG07 e EMIFMAT01)
+30-jul.
+Pesquisa Amostral I
+Influenciadores e Gênero
+(EMIFMAT07 e EMIFCG07)
+06-ago.
+Pesquisa Amostral II
+Influenciadores e Gênero
+(EMIFMAT07 e EMIFCG07)
+20-ago.
+Probabilidade I
+Diversos Temas
+(EMIFMAT01)
+27-ago.
+Probabilidade II e Teste de Hipóteses I
+Eleições
+(EMIFCNT02 e EMIFCG07)
+24-set.
+Teste de Hipóteses II
+Eleições e Resíduos Sólidos
+(EMIFCNT02, EMIFCG07 e EMIFCG03)
+08-out.
+Regressão Linear
+Resíduos Sólidos
+(EMIFCG02, EMIFCG07 e EMIFMAT06)
+05-nov.
+Reorientação
+Resíduos Sólidos
+(EMIFCG02, EMIFMAT05, EMIFMAT01, EMIFCG07 e EMIFMAT07)
+
+
+
+Quadro 2 - Lista de atividades realizadas com o grupo G2, temas e correspondentes habilidades específicas da BNCC.
+DATA
+CONTEÚDO MINISTRADO
+Temas
+Habilidades BNCC
+19-mar.
+Programação e Lógica
+-
+(EM13MAT405)
+02-abr.
+Algoritmos
+-
+(EM13MAT405)
+09-abr.
+Utilização do app Ágora
+Diversos Temas - Especialmente RSS
+(EMIFCG02)
+30-abr.
+Querido Dado
+Deslocamento em Salvador
+(EMIFMAT01)
+14-mai.
+Querido Dado em Mathigon
+Deslocamento em Salvador
+(EMIFMAT01)
+21-mai.
+Querido Dado em Python
+ Deslocamento em Salvador
+(EMIFMAT01)
+28-mai.
+Introdução a Variabilidade
+Deslocamento em Salvador
+(EMIFMAT02)
+04-jun.
+Visualização de Dados
+Bibliotecas em Escolas
+(EM13MAT407)
+11-jun.
+Visualização de Dados II
+Acidentes
+(EM13MAT407)
+09-jul.
+Reorientação
+-
+(EM13MAT405)
+16-jul.
+Correlação
+Hotelaria
+(EMIFCNT01 e EMIFMAT02)
+30-jul.
+Prática de Correlação
+Atletas femininas de Vôlei
+(EM13MAT407)
+06-ago.
+Medidas de Tendência Central e Medidas de Dispersão
+-
+(EMIFMAT01)
+20-ago.
+Prática de Medidas de Tendência Central e Medidas de Dispersão
+Atletas femininas de Vôlei
+(EM13MAT407)
+27-ago.
+Comandos de Ordenação e Agrupamento
+Doces
+(EM13MAT407)
+17-set.
+Projeto Final
+Músicas populares no Tik Tok
+(EMIFCG01 e EMIFMAT02)
+24-set.
+Projeto Final
+Músicas populares no Tik Tok
+(EMIFCG01 e EMIFMAT02)
+08-out.
+Projeto Final
+Músicas populares no Tik Tok
+(EMIFCG01 e EM13MAT407)
+22-out.
+Projeto Final
+Músicas populares no Tik Tok
+(EMIFCG01 e EM13MAT407)
+05-nov
+Apresentação do Projeto Final
+Músicas populares no Tik Tok
+(EMIFCG01), (EMIFCG03) e (EM13MAT407)
+
+
+Habilidades e Competências BNCC
+(EMIFCG01) Identificar, selecionar, processar e analisar dados, fatos e evidências com curiosidade, atenção, criticidade e ética, inclusive utilizando o apoio de tecnologias digitais.
+(EMIFCG02) Posicionar-se com base em critérios científicos, éticos e estéticos, utilizando dados, fatos e evidências para respaldar conclusões, opiniões e argumentos, por meio de afirmações claras, ordenadas, coerentes e compreensíveis, sempre respeitando valores universais, como liberdade, democracia, justiça social, pluralidade, solidariedade e sustentabilidade.
+(EMIFCG07) Reconhecer e analisar questões sociais, culturais e ambientais diversas, identificando e incorporando valores importantes para si e para o coletivo que assegurem a tomada de decisões conscientes, consequentes, colaborativas e responsáveis.
+(EMIFMAT01) Investigar e analisar situações problema identificando e selecionando conhecimentos matemáticos relevantes para uma dada situação, elaborando modelos para sua representação.
+(EMIFMAT02) Levantar e testar hipóteses sobre variáveis que interferem na explicação ou resolução de uma situação-problema elaborando modelos com a linguagem matemática para analisá-la e avaliar sua adequação em termos de possíveis limitações, eficiência e possibilidades de generalização.
+(EMIFCNT02) Levantar e testar hipóteses sobre variáveis que interferem na dinâmica de fenômenos da natureza e/ou de processos tecnológicos, com ou sem o uso de dispositivos e aplicativos digitais, utilizando procedimentos e linguagens adequadas à investigação científica.
+(EMIFMAT07) Identificar e explicar questões socioculturais e ambientais aplicando conhecimentos e habilidades matemáticas para avaliar e tomar decisões em relação ao que foi observado.
+
+(EM13MAT405) Utilizar conceitos iniciais de uma linguagem de programação na implementação de algoritmos escritos em linguagem corrente e/ou matemática.
+
+(EM13MAT407) Interpretar e comparar conjuntos de dados estatísticos por meio de diferentes diagramas e gráficos (histograma, de caixa (box-plot), de ramos e folhas, entre outros), reconhecendo os mais eficientes para sua análise.
+
+
+
+Apêndice A02 - Resultados das reorientações
+
+Tabela A01 -  Quantidade de estudantes por conceito correspondente à reorientação do segundo ciclo de 2022:
+
+Conceito
+G1
+G2
+Ótimo
+12
+5
+Muito Bom 
+13
+4
+Bom
+1
+1
+Regular
+3
+1
+Insatisfatório
+1
+1
+
+
+
+
+
+Gráfico A01 - Idade dos estudantes dos grupos G1 e G2
+
+
+
+
+
+
+Gráfico A02 - Notas das reorientações de Ciência de Dados e de Práticas Investigativa do grupos G1. Os temas dos projetos submetidos ao congresso Jovem Cientistas da UFBA de 2022 indicados pela letra P e número são apresentados no quadro logo após o gráfico..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Gráfico A03- Notas das avaliações de Ciência de Dados e Práticas Investigativas do grupos G1 e identificação dos respectivos colégios em 2022.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Gráfico A06-  Idade dos estudantes do grupos G1 e identificação dos respectivos colégios em 2022.
+
+
+Gráfico A07 - Gráfico boxplot das atividades de reorientação do grupo G1 por sexo.
+
+
+
+
+
+
+
+
+
+
+
+
