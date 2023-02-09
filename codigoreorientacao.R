@@ -204,3 +204,4 @@ dadoscd2022 %>%
     bbc_style()
   ggsave('figuras/report_idebaif.png')        
   
+  
