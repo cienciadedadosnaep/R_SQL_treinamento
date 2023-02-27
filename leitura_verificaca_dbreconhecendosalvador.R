@@ -583,39 +583,88 @@ library(bbplot)
     
     
 #######################################################################
+# Ensino Medio
     
+library(readr)
+ideb_medio <- read_delim("data/ideb_medio.ods", 
+                   delim = ";", escape_double = FALSE, 
+                   trim_ws = TRUE)
     
-    #######################################IDEB SSA#####################################
-    library(ggplot2)
-    library(ggjoy)
-    library(bbplot)
-    
-    idebssa <-  escola_ano_escolar %>% filter(id_municipio %in% c(2927408))  
-    idebssa %>%
-      filter(ano<2021) %>%
-      filter(anos_escolares %in% c("finais (6-9)")) %>%
-      mutate(ano = as.factor(ano)) %>%
-      mutate(id_escola = as.factor(id_escola)) %>%
-      group_by(ano,id_escola) %>%
-      ggplot(aes(x=ideb, y=ano)) +
-      geom_joy(scale = 5, rel_min_height = 0.01) +
-      scale_x_continuous(expand = c(0.00, 0)) +
-      scale_y_discrete(expand = c(0.00, 0))+
-      #    scale_y_discrete(labels = Ano)+
-      xlab("")+
-      ylab("")+
-      labs(caption = "Fonte de dados:  Instituto Nacional 
+
+ideb_medio %>% mutate(ano = as.factor(ANO)) %>%
+  mutate(COD_ESCOLA = as.factor(COD_ESCOLA)) %>%
+  mutate(`Ensino Médio` = 'Esino Médio') %>%
+  group_by(ano,COD_ESCOLA) %>%
+  ggplot(aes(x=ano, y=IDEB,fill=`Ensino Médio`)) +
+  #      geom_joy(scale = 5, rel_min_height = 0.01) +
+  #      scale_x_continuous(expand = c(0.00, 0)) +
+  #      scale_y_discrete(expand = c(0.00, 0))+
+  #    scale_y_discrete(labels = Ano)+
+  geom_boxplot(color='darkblue',fill='white',outlier.colour = 'red')+
+  geom_jitter(width=0.1,color='black')+
+  ylab("Ideb")+
+  xlab("")+
+  labs(caption = "Fonte de dados:  Instituto Nacional 
        de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)")+
-      ggtitle("Ideb das escolas de Salvador (anos finais)")+
-      theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
-      theme(axis.title.y = element_text(color = "black",size = 16))+
-      theme(axis.title.x = element_text(color = "black",size = 16))+
-      theme(axis.text.y=element_text(size=16)) +
-      theme(axis.text = element_text(size = 16))  +
-      theme(legend.text = element_text(size = 14)) +
-      theme(legend.title = element_text(size = 16)) +
-      theme(legend.position = "none")
-    #  +
-    #    bbc_style()
-    ggsave('figuras/idebaf.png')
+  ggtitle("Ideb das escolas de Salvador")+
+  theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+  theme(axis.title.y = element_text(color = "black",size = 16))+
+  theme(axis.title.x = element_text(color = "black",size = 16))+
+  theme(axis.text.y=element_text(size=16)) +
+  theme(axis.text = element_text(size = 16))  +
+  theme(legend.text = element_text(size = 14)) +
+  theme(legend.title = element_text(size = 16)) +
+  theme(legend.position = "none")  +
+  bbc_style()
+
+
+
+
+ideb_medio %>% mutate(ano = as.factor(ANO)) %>%
+  mutate(COD_ESCOLA = as.factor(COD_ESCOLA)) %>%
+  mutate(`Ensino Médio` = 'Esino Médio') %>%
+  group_by(ano,COD_ESCOLA) %>%
+  ggplot(aes(x=IDEB, y=ano)) +
+  geom_joy(scale = 5, rel_min_height = 0.01) +
+  scale_x_continuous(expand = c(0.00, 0)) +
+  scale_y_discrete(expand = c(0.00, 0))+
+  #    scale_y_discrete(labels = Ano)+
+  xlab("")+
+  ylab("")+
+  labs(caption = "Fonte de dados:  Instituto Nacional 
+       de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)")+
+  ggtitle("Ideb das escolas de Salvador (Ensino Médio)")+
+  theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+  theme(axis.title.y = element_text(color = "black",size = 16))+
+  theme(axis.title.x = element_text(color = "black",size = 16))+
+  theme(axis.text.y=element_text(size=16)) +
+  theme(axis.text = element_text(size = 16))  +
+  theme(legend.text = element_text(size = 14)) +
+  theme(legend.title = element_text(size = 16)) +
+  theme(legend.position = "none")
     
+
+library(purrr)
+library(tidyr)
+ideb_medio %>% 
+  mutate(ANO = as.character(ANO)) %>% 
+  group_by(ANO) %>%
+  select(ANO,IDEB) %>%
+  drop_na() %>%
+  summarise(n())
+
+
+ideb_medio %>% 
+  mutate(ANO = as.character(ANO)) %>% 
+  group_by(ANO) %>%
+  select(ANO,IDEB) %>%
+  summarise(n())
+
+
+
+ideb_medio %>% 
+  mutate(ANO = as.character(ANO)) %>% 
+  group_by(ANO) %>%
+  select(ANO,IDEB) %>%
+  drop_na() %>%
+  summarise(media = median(IDEB))
