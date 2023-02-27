@@ -23,12 +23,16 @@ auxCorpus <- tm_map(auxCorpus, removeWords, stopwords('pt'))
 wordcloud(auxCorpus$content,max.words=500,colors=c("blue","red"))
 
 
+library(readr)
+palavrasseeufossecientista_v00 <- read_csv("data/palavrasseeufossecientista_v00.txt")
+
+
 d <- palavrasseeufossecientista_v00
 
 
-set.seed(1234)
+set.seed(1)
 wordcloud(words = d$word, freq = d$freq, min.freq = 1,
-          max.words=200, random.order=FALSE, rot.per=0.35, 
+          max.words=100, random.order=FALSE, rot.per=0.33, 
           colors=brewer.pal(8, "Dark2"))
 
 
@@ -49,6 +53,17 @@ tabelassa %>%
   ggplot( aes(area = Valor, fill =`Cor ou raça` , label = Valor),
           color=brewer.pal(6, "Dark2")) +
   geom_treemap() +
-  geom_treemap_text()
+  geom_treemap_text() +
+  labs(caption = "Fonte de dados: SIDRA/PNAD 2010")+
+  ggtitle("Distribuição (%) raça/cor - Salvador BA")+
+  theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+  theme(axis.title.y = element_text(color = "black",size = 16))+
+  theme(axis.title.x = element_text(color = "black",size = 16))+
+  theme(axis.text.y=element_text(size=16)) +
+  theme(axis.text = element_text(size = 16))  +
+  theme(legend.text = element_text(size = 14)) +
+  theme(legend.title = element_text(size = 16)) 
+#  theme(legend.position = "none") 
+
 
 
