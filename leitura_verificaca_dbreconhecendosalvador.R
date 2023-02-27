@@ -582,3 +582,40 @@ library(bbplot)
     
     
     
+#######################################################################
+    
+    
+    #######################################IDEB SSA#####################################
+    library(ggplot2)
+    library(ggjoy)
+    library(bbplot)
+    
+    idebssa <-  escola_ano_escolar %>% filter(id_municipio %in% c(2927408))  
+    idebssa %>%
+      filter(ano<2021) %>%
+      filter(anos_escolares %in% c("finais (6-9)")) %>%
+      mutate(ano = as.factor(ano)) %>%
+      mutate(id_escola = as.factor(id_escola)) %>%
+      group_by(ano,id_escola) %>%
+      ggplot(aes(x=ideb, y=ano)) +
+      geom_joy(scale = 5, rel_min_height = 0.01) +
+      scale_x_continuous(expand = c(0.00, 0)) +
+      scale_y_discrete(expand = c(0.00, 0))+
+      #    scale_y_discrete(labels = Ano)+
+      xlab("")+
+      ylab("")+
+      labs(caption = "Fonte de dados:  Instituto Nacional 
+       de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)")+
+      ggtitle("Ideb das escolas de Salvador (anos finais)")+
+      theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+      theme(axis.title.y = element_text(color = "black",size = 16))+
+      theme(axis.title.x = element_text(color = "black",size = 16))+
+      theme(axis.text.y=element_text(size=16)) +
+      theme(axis.text = element_text(size = 16))  +
+      theme(legend.text = element_text(size = 14)) +
+      theme(legend.title = element_text(size = 16)) +
+      theme(legend.position = "none")
+    #  +
+    #    bbc_style()
+    ggsave('figuras/idebaf.png')
+    
