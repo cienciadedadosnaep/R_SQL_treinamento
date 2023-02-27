@@ -1,0 +1,25 @@
+"",word,freq
+Bringing Science to the Favelas,Bringing Science,6
+to the Favelas,to the Favelas,6
+Cure of cancer,Cure of cancer,16 
+Self-esteem,Self-esteem,16
+Pain elimination,Pain elimination,16
+Mental desorders,Mental desorders,15
+Cure COVID-19,Cure COVID-19,14
+Teleportation,Teleportation,13 
+End of criminality,End of criminality,12 
+Devices,Devices,11
+End of racism,End of racism,10
+Robot for self-esteem,Robot for self-esteem,9
+Burglary device,Burglary device,8
+Rhinitis cure,Rhinitis cure,7
+Develop vaccine,Develop vaccine,6
+Control minds,Control minds,5
+End of hunger,End of hunger,4 
+Addiction cure,Addiction cure,3
+Technology for security,Technology for security,2
+More opportunities to go where you want,More opportunities to go where you want,1
+
+
+
+
