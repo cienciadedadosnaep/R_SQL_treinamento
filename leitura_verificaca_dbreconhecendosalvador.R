@@ -134,6 +134,16 @@ library(tidyverse)
 ##############Ensino Fundamental total############################################
 
 TDI_ESCOLAS_2021 %>% filter(CO_MUNICIPIO %in% c(2927408)) %>%
+  filter(NO_DEPENDENCIA %in% c("Municipal","Estadual")) %>%
+  #                     group_by(NO_DEPENDENCIA) %>%
+  arrange(NO_DEPENDENCIA)%>%
+  select(NO_DEPENDENCIA,FUN_CAT_0,MED_CAT_0) %>%
+  mutate(Rede = factor(NO_DEPENDENCIA,c("Municipal","Estadual"))) %>%
+  group_by(Rede) %>%
+  filter(!is.na(FUN_CAT_0)) %>% summarise(mediana = median(FUN_CAT_0))
+
+
+TDI_ESCOLAS_2021 %>% filter(CO_MUNICIPIO %in% c(2927408)) %>%
                      filter(NO_DEPENDENCIA %in% c("Municipal","Estadual")) %>%
 #                     group_by(NO_DEPENDENCIA) %>%
                      arrange(NO_DEPENDENCIA)%>%
@@ -285,6 +295,7 @@ ggsave('figuras/TDI_EF_TOTAL_jitter.png')
 ##teste bbc
 
 library(bbplot)
+library(ggplot2)
 
 TDI_ESCOLAS_2021 %>% filter(CO_MUNICIPIO %in% c(2927408)) %>%
   filter(NO_DEPENDENCIA %in% c("Municipal","Estadual")) %>%
@@ -304,10 +315,10 @@ TDI_ESCOLAS_2021 %>% filter(CO_MUNICIPIO %in% c(2927408)) %>%
     x = "Rede Escolar",
     y = "%",
     fill=' ',
-    title = 'TDI (2021)',
-    subtitle = 'Ensino Fundamental')+
+    title = 'TDI(%)',
+    subtitle = 'Ensino Fundamental (2021)')+
   geom_label(aes(x = 1.250, y = 36.5, 
-                 label = "mediana 2x maior"), 
+                 label = "mediana 2,55 x maior"), 
              hjust = 0.2, 
              vjust = 0.9, 
              colour = "#555555", 
@@ -315,7 +326,7 @@ TDI_ESCOLAS_2021 %>% filter(CO_MUNICIPIO %in% c(2927408)) %>%
              alpha=0.0002,
              label.size = NA, 
              family="Helvetica", 
-             size = 6)+
+             size = 5)+
   geom_curve(aes(x = 1.15, y = 18, xend = 1.5, yend = 32), 
              colour = "#555555", 
              curvature = 0.2,
@@ -668,3 +679,143 @@ ideb_medio %>%
   select(ANO,IDEB) %>%
   drop_na() %>%
   summarise(media = median(IDEB))
+
+
+
+
+ideb_anos_finais_v00 <- read_delim("data/ideb_anos_finais_v00.csv", 
+                                   delim = ";", escape_double = FALSE, trim_ws = TRUE)
+
+
+ideb_medio_v00 <- read_csv("data/ideb_medio_v00.csv")
+
+library(dplyr)
+library(ggplot2)
+library(ggjoy)
+
+#ideb anos finais e ensino medio
+idebafem<-full_join(ideb_anos_finais_v00,ideb_medio_v00)
+
+
+
+
+idebafem %>%
+  filter(ANO>2015) %>%
+  filter(NIVEL %in% c("EFAF","EM")) %>%
+  mutate(ano = as.factor(ANO)) %>%
+  mutate(COD_ESCOLA = as.factor(COD_ESCOLA)) %>%
+  group_by(ano,COD_ESCOLA,NIVEL) %>%
+  ggplot(aes(x=IDEB, y=ano,fill=NIVEL)) +
+  geom_joy(scale = 5, rel_min_height = 0.01) +
+  scale_x_continuous(expand = c(0.00, 0)) +
+  scale_y_discrete(expand = c(0.00, 0))+
+  #    scale_y_discrete(labels = Ano)+
+  xlab("Ideb")+
+  ylab("")+
+  labs( subtitle = "", caption = "Fonte de dados:  Instituto Nacional 
+       de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)")+
+  ggtitle("Ideb das escolas de Salvador")+
+  theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+  theme(axis.title.y = element_text(color = "black",size = 16))+
+  theme(axis.title.x = element_text(color = "black",size = 16))+
+  theme(axis.text.y=element_text(size=16)) +
+  theme(axis.text = element_text(size = 16))  +
+  theme(legend.text = element_text(size = 14)) +
+  theme(legend.title = element_text(size = 16)) +
+  theme(legend.position = "bottom")  +
+  bbc_style()
+
+
+
+
+
+idebafem %>% mutate(ano = as.factor(ANO)) %>%
+  mutate(COD_ESCOLA = as.factor(COD_ESCOLA)) %>%
+  group_by(ano,COD_ESCOLA,NIVEL) %>%
+  ggplot(aes(x=IDEB, y=ano,fill=NIVEL)) +
+  geom_joy(scale = 5, rel_min_height = 0.01) +
+  scale_x_continuous(expand = c(0.00, 0)) +
+  scale_y_discrete(expand = c(0.00, 0))+
+  #    scale_y_discrete(labels = Ano)+
+  xlab("")+
+  ylab("")+
+  labs(caption = "Fonte de dados:  Instituto Nacional 
+       de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)")+
+  ggtitle("Ideb das escolas de Salvador")+
+  theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+  theme(axis.title.y = element_text(color = "black",size = 16))+
+  theme(axis.title.x = element_text(color = "black",size = 16))+
+  theme(axis.text.y=element_text(size=16)) +
+  theme(axis.text = element_text(size = 16))  +
+  theme(legend.text = element_text(size = 14)) +
+  theme(legend.title = element_text(size = 16)) +
+  theme(legend.position = "right")
+
+
+
+
+idebafem %>% 
+  filter(ANO>2015) %>%
+  mutate(ano = as.factor(ANO)) %>%
+  mutate(COD_ESCOLA = as.factor(COD_ESCOLA)) %>%
+#  mutate(`Ensino Médio` = 'Esino Médio') %>%
+  group_by(ano,COD_ESCOLA,NIVEL) %>%
+  ggplot(aes(x=ano, y=IDEB,fill=NIVEL,color=NIVEL)) +
+  #      geom_joy(scale = 5, rel_min_height = 0.01) +
+  #      scale_x_continuous(expand = c(0.00, 0)) +
+  #      scale_y_discrete(expand = c(0.00, 0))+
+  #    scale_y_discrete(labels = Ano)+
+#  geom_boxplot(color='darkblue',outlier.colour = 'red')+
+#  ggplot(idebafem,aes(x=ano, y=IDEB,color=NIVEL))+
+  geom_boxplot(color='darkblue',fill='white',outlier.colour = 'red')+
+  geom_jitter(width=0.1,color='black')+
+    ylab("Ideb")+
+  xlab("")+
+  labs(caption = "Fonte de dados:  Instituto Nacional 
+       de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)")+
+  ggtitle("Ideb das escolas de Salvador")+
+  theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+  theme(axis.title.y = element_text(color = "black",size = 16))+
+  theme(axis.title.x = element_text(color = "black",size = 16))+
+  theme(axis.text.y=element_text(size=16)) +
+  theme(axis.text = element_text(size = 16))  +
+  theme(legend.text = element_text(size = 14)) +
+  theme(legend.title = element_text(size = 16))+
+  facet_grid(~ NIVEL)+
+    bbc_style()+
+theme(legend.position = "none") 
+  
+
+
+
+
+
+
+idebafem %>% 
+  filter(ANO>2015) %>%
+  mutate(ano = as.factor(ANO)) %>%
+  filter(NIVEL %in% c('EFAF')) %>%
+  mutate(COD_ESCOLA = as.factor(COD_ESCOLA)) %>%
+  mutate(`Ensino Fundamenal` = 'Esino Fundamental') %>%
+  group_by(ano,COD_ESCOLA) %>%
+  ggplot(aes(x=ano, y=IDEB,fill=`Ensino Fundamenal`)) +
+  #      geom_joy(scale = 5, rel_min_height = 0.01) +
+  #      scale_x_continuous(expand = c(0.00, 0)) +
+  #      scale_y_discrete(expand = c(0.00, 0))+
+  #    scale_y_discrete(labels = Ano)+
+  geom_boxplot(color='darkblue',fill='white',outlier.colour = 'red')+
+  geom_jitter(width=0.1,color='black')+
+  ylab("Ideb")+
+  xlab("")+
+  labs(caption = "Fonte de dados:  Instituto Nacional 
+       de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)")+
+  ggtitle("Ideb das escolas de Salvador")+
+  theme(axis.text.x=element_text(size=16, angle=0, vjust=.8, hjust=0.8)) +
+  theme(axis.title.y = element_text(color = "black",size = 16))+
+  theme(axis.title.x = element_text(color = "black",size = 16))+
+  theme(axis.text.y=element_text(size=16)) +
+  theme(axis.text = element_text(size = 16))  +
+  theme(legend.text = element_text(size = 14)) +
+  theme(legend.title = element_text(size = 16)) +
+  theme(legend.position = "none")  +
+  bbc_style()
