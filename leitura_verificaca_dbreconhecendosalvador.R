@@ -340,7 +340,8 @@ bbc_style()+
   theme(legend.position="none")
 
 
-ggsave('figuras/TDI_EF_TOTAL_jitter.png')
+ggsave('figuras/TDI_EF_TOTAL_jitter.png',units = 'cm',width = 14,height = 15)        
+ggsave('figuras/TDI_EF_TOTAL_jitter.svg',units = 'cm',width = 14,height = 15)        
 
 
 
@@ -461,7 +462,8 @@ library(bbplot)
       theme(legend.title = element_text(size = 16)) +
       theme(legend.position = "bottom")  +
         bbc_style()
-    ggsave('figuras/idebaif.png')        
+    ggsave('figuras/idebaif.png',units = 'cm',width = 20,height = 15)        
+    ggsave('figuras/idebaif.svg',units = 'cm',width = 20,height = 15)        
     
     
     
@@ -529,7 +531,7 @@ library(bbplot)
       theme(legend.position = "none")
     #  +
     #    bbc_style()
-    ggsave('figuras/idebaim.png')  
+    ggsave('figuras/idebaim.png',units = 'cm',width = 20,height = 20)  
     
     ##########################finais e iniciais####################################    
     
